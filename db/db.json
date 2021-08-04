@@ -1,0 +1,121 @@
+{
+  "articles": [
+    {
+      "id": 100,
+      "img": "https://images.idgesg.net/images/article/2020/05/ip_winners-and-losers_chess_check-mate_by-rawf8-getty-images_1190439498-100840985-large.jpg",
+      "title": "Is JavaScript the new Java?",
+      "preview": "Sorry, Java, but JavaScript's success in the browser, on the server, and in mobile have some believing it’s the real ‘Write once, run anywhere’ programming language.",
+      "content": "Has JavaScript displaced Java as the new “Write once, run anywhere” programming language? It all depends on your perspective. And with technologies such as WebAssembly arriving on the scene, Java could get a boost in a newfangled “write once, compile anywhere” paradigm.\n\nJava will run wherever the JVM works, providing portability across many operating systems and hardware platforms including mobile and embedded devices. But JavaScript, always crucial to in-browser applications, now works for desktop applications via technology such as the Electron framework, for mobile applications via frameworks like React Native, and for web back ends through Node.js and Deno, notes developer Shalitha Suranga, author of the Neutralino JavaScript/TypeScript framework.\n\n[ What is GitOps? Extending devops to Kubernetes and beyond ]\nJavaScript even works for IoT and robotics development, through tools such as NodeMCU. “Nowadays, whatever we can do with Java can be done with JavaScript as well,” said Suranga, a software engineer at digital products builder 99x and an Apache project management committee member. He recently authored an opinion piece on Medium arguing that JavaScript, not Java, is today’s “Write once, run anywhere” language.",
+      "date": "14/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 101,
+      "img": "https://images.idgesg.net/images/article/2020/09/calendar_pages_flipping_through_months_time_schedules_past_future_history_whats_next_by_microstockhub_gettyimages-902635032_2400x1600-100859562-large.jpg",
+      "title": "Noteworthy technology acquisitions 2021",
+      "preview": "",
+      "content": "Amid the coronavirus, 2020 was unpredictable in more ways than anyone would have expected. But one thing that stayed fairly constant was the steady flow of mergers and acquisitions (M&A) across the tech sector.\n\nGlobal tech M&A deals last year totalled $634 billion, a 91.8% year-over-year increase, according to GlobalData. Among a late flurry of big deals was the $35 billion acquisition of Xilinx by Advanced Micro Devices and Salesforce's $27.7 billion acquisition of Slack.\n\n[ Further reading: Biggest technology acquisitions of 2020 ]\nAs for whether 2021 will maintain last year’s pace, if the first part of the year is anything to go by, there will be no slowing of big deals across the industry, with silicon innovations and collaboration software already proving to be hot areas.",
+      "date": "03/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 102,
+      "img": "https://images.idgesg.net/images/article/2020/09/hand_touches_virtual_interface_rippling_forward_into_2021_by_dilok_klaisataporn_gettyimages-1213868775_2400x1600-100859624-large.jpg",
+      "title": "For Microsoft and Apple, a reprise of all-virtual dev conferences",
+      "preview": "",
+      "content": "Microsoft and Apple will host their respective developer conferences — Build and WWDC — over the next two months as all-virtual events, mimicking their confabs of 2020.\n\nApple was first to announce last week that WWDC —its Worldwide Developers Conference — will take place June 7-11, those dates in line with the Cupertino, Calif. company's usual first-full-week-of-June schedule and so several weeks earlier than last year.\n\nMeanwhile, Microsoft has now posted the dates for its Build developers conference — May 25-27 — on its company events portal.",
+      "date": "04/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 103,
+      "img": "https://images.idgesg.net/images/article/2021/04/screen-shot-2021-04-01-at-11.31.09-am-100883142-large.jpg",
+      "title": "Cisco adds 'People Insights' analytics to Webex",
+      "preview": "",
+      "content": "Cisco is adding new analytics features to its Webex collaboration platform that highlight working patterns at the personal, team, and organizational level.\n\nThe analytics – under the company’s People Insights brand – are designed to provide a variety of data from interactions within the Webex platform. It also uses information from the Cisco’s Webex Graph to track the relationships between staff at organizations using the collaboration platform, which contains video, call and team messaging features.\n\nPeople Insights initially focused on providing profile information for Webex meeting participants. The new features were unveiled this week.\n\n[ Related: How to manage group chat in the enterprise (hint: lightly) ]\nThe first to be available, “Personal Insights,” will provide workers with analytics about their own use of Webex and help track productivity and improve wellbeing, Cisco said. For instance, it can highlight the potential for burnout if an individual sets up too many back-to-back meetings without any focus time, or if they are frequently working extra hours outside of their scheduled routine.  Other features include the ability to suggest that users contact certain colleagues they may not have communicated with lately.\n\nIt can also highlight when a worker regularly arrives late to meetings, though Jeetu Patel, senior vice president and general manager for Security and Collaboration at Cisco, notes that the personal analytics data will not be available to managers. “They're not meant for your organization, they're not meant for your boss, they're not meant for your peers, it's only for you,” Patel said.\n\nHe added: “The goal is not to inspect [what workers are doing], the goal is to help you manage your well-being, your productivity and nurture your relationships.”",
+      "date": "04/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 104,
+      "img": "https://images.techhive.com/images/article/2015/09/volitale-up-down-market-stocks-mixed-100613916-large.jpg",
+      "title": "Biggest tech IPOs of 2021",
+      "preview": "",
+      "content": "The 2020 calendar year will long be remembered as an annus horribilis for most, except for a handful of technology companies who reaped the rewards of a global shift to remote work with  successful initial public offerings (IPOs).\n\nUS companies alone raised a record $435 billion in stock sales in 2020, with more than a quarter of that figure coming from IPOs — far outstripping 2014's mark of $279 billion, according to data compiled by Bloomberg. The vast majority of those new listings defined themselves as technology companies.\n\nCloud-based software firms like Zoom, Snowflake, Asana, Airbnb and Palantir all performed particularly well, and continue to see their stock price flourish as remote work and e-commerce continue to be the norm for many into 2021.",
+      "date": "04/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 105,
+      "img": "https://images.idgesg.net/images/article/2020/03/hacker_attacks_from_within_a_windows_system_by_alphaspirit_gettyimages-1203596337_2400x1600-100834845-large.jpg",
+      "title": "Microsoft hands IT admins beefed-up Windows release health hub",
+      "preview": "",
+      "content": "Microsoft has begun rolling out its Windows release health dashboard to the Microsoft 365 admin portal, a move the company previewed earlier this month at its all-virtual Ignite conference.\n\n\"This will be a phased rollout and we expect this information experience to be available to all applicable customers by the end of April,\" Mabel Gomes, senior communications program manager in the Windows group, said in a March 25 post to a company blog.\n\nThe original Windows release health launched almost two years ago as one of the changes Microsoft instituted after the disastrous debut of Windows 10 1809, the fall 2018 version of the operating system that had to be yanked from release because it deleted data.\n\n[ Related: How to replace Edge as the default browser in Windows 10 — and why you shouldn't ]\nThat dashboard — later labeled a \"hub\" — has offered information on current rollout status and known issues, both open and closed cases, for all Windows 10 updates. Notably, the hub was the one public location where Microsoft posted information about all Windows 10 blockers, issues that have prevented machines from upgrading to the next refresh (and thus marked the systems Microsoft would refuse to offer an update).\n\nThe public release health hub can be found here.",
+      "date": "05/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 106,
+      "img": "https://images.idgesg.net/images/article/2021/03/android-one-google-100882613-large.jpg",
+      "title": "What the hell is happening with Android One?",
+      "preview": "",
+      "content": "Not long ago, a low-profile program called Android One looked like it could be just the one-two punch Android needed.\n\nAndroid One, like lots of Google initiatives, has had a long and winding history with plenty of twists and turns. When Android One first came into the picture in 2014, it was described as an effort to \"make high-quality smartphones accessible to as many people as possible.\" The focus was squarely on bringing affordable phones with exceptional experiences to emerging markets — places like Pakistan and India, where it could be \"hard for people\" to \"get their hands on a high-quality smartphone,\" as Google put it at the time.\n\nBut that was just the start of Google's Android One ambitions. Three years later, in 2017, Google expanded the program with the launch of Android One phones in places like Japan, Taiwan, and eventually the United States. The company changed its description of the effort from that original small-scale focus to the much broader vision of a \"collaboration between Google and [its] partners to deliver a software experience designed by Google,\" with a guarantee of reasonably timely ongoing operating system updates and an experience that'd be free from all the bloat and shenanigans baked into so many Android products.\n\nSound familiar? It should. It's basically the same concept we see with Google's own self-made Pixel phones, only scaled down a bit and with other manufacturers involved. Or, to zoom back even further into Android nerdland, it's incredibly similar to what we used to see with Google's Nexus phones many moons ago — where Google would bring in other phone-makers to handle the hardware but then maintain complete control over the software, support, and overall user experience itself. (In the Nexus scenario, of course, the phones were branded as Google devices. But that surface-level distinction aside, the situation is almost eerily comparable.)",
+      "date": "05/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 107,
+      "img": "https://images.idgesg.net/images/article/2020/03/slack_network_security_by_your_photo_gettyimages-1093539466_2400x1600-100836960-large.jpg",
+      "title": "Slack blocks public DM ‘invite messages’ after backlash",
+      "preview": "",
+      "content": "Slack moved quickly this week to make changes to its public direct messaging feature after a backlash highlighted the potential for harassment from people sending abusive messages.\n\nThe Slack Connect DM feature, unveiled in October, became generally available to all users of the platform on Wednesday. It enables Slack users to send an invite to someone outside of their Slack “workspace,” which, when accepted by the other party, allows direct messages to be exchanged in the chat app.\n\nThe invite is sent to the recipient’s email address with a button to “accept” the invitation. Prior to Slack’s changes, the sender could also include a text message to the recipient within the invite.\n\n[ Related: Slack vs. Teams: Which is best for your business? ]\nHowever, Twitter users quickly pointed out how the feature could be abused, with the ability to send harassing messages. Since the invite emails are sent from a single feedback@slack.com account — blocking them means all Connect DM invites are then marked as spam.\n\nFollowing the backlash, Slack said it would no longer allow messages to be added to Connect DM invites, thus preventing abusive ones from being included in the invite email.\n\n\"After rolling out Slack Connect DMs this morning, we received valuable feedback from our users about how email invitations to use the feature could potentially be used to send abusive or harassing messages,\" Jonathan Prince, Slack’s vice president of communications and policy, said in a Twitter post on Wednesday.",
+      "date": "06/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 108,
+      "img": "https://images.idgesg.net/images/article/2020/03/fintech_electronic_payments_banking_dollars_euros_pounds_yen_by_metamorworks_gettyimages-1127063674_2400x1600-100835370-large.jpg",
+      "title": "Gartner: Spending on social and collaboration software booms as remote work takes hold",
+      "preview": "",
+      "content": "Spending on social and collaborative applications will likely see double-digit growth this year, according to a Gartner forecast, as businesses focus on keeping remote workers connected during the pandemic and beyond.\n\nWhile videoconferencing tools such as Zoom, Microsoft Teams, and Cisco Webex were the big winners of the global shift to remote working during 2020, there has also been an uptick in interest in other types of platforms that connect workers and facilitate ad-hoc communications and “watercooler”-style interactions.\n\n[ Related: Remote working, now and forevermore? ]\nRevenues in three software market segments – collaborative work management, enterprise social networks. and employee communication software – are set to reach almost $4.5 billion in 2021, a 17% increase from $3.8 billion in 2020, according to Gartner’s “Forecast Analysis: Social and Collaboration Software in the Workplace, Worldwide.”  \n\nThe five-year revenue forecast predicts that revenues will increase by double-digit percentages each year to $6.9 billion in 2024; the research firm increased its long-term revenue growth forecast in comparison to its 2019 expectations due to the global shift toward remote work. Other drivers behind the increase include a rise in the number of knowledge workers globally, according to Gartner.\n\n“The need to suddenly empty out all the office buildings, while keeping businesses afloat, gave a jolt to many markets, with social and collaboration being one of those at the forefront,” said Craig Roth, research vice president at Gartner and one of the report’s authors. “Social and collaboration products went from ‘nice to have’ to ‘must have’ within a period of a few weeks.”",
+      "date": "06/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 109,
+      "img": "https://images.idgesg.net/images/article/2021/01/mozilla_firefox_logo_against_abstract_blue_orange_smoke_by_lucas_benjamin_cc0-like_via_unsplash_2400x1600-100873427-large.jpg",
+      "title": "What's in the latest Firefox? Script stand-ins help sites fend off anti-tracking assaults",
+      "preview": "",
+      "content": "Mozilla on Tuesday updated Firefox to version 87, adding a new privacy feature designed to automatically fix websites impaired by the browser's aggressive anti-tracking defenses.\n\nThe organization's security engineers also patched eight vulnerabilities, only two of which were labeled as \"High,\" Firefox's second-most-serious label. It was the second version of Firefox without a top-ranked \"Critical\" bug.\n\nFirefox 87 can be downloaded for Windows, macOS and Linux from Mozilla's site. Because Firefox updates in the background, most users can relaunch the browser to install the latest version. To manually update on Windows, pull up the menu under the three horizontal bars at the upper right, then click the help icon (the question mark within a circle). Choose \"About Firefox.\" (On macOS, \"About Firefox\" can be found under the \"Firefox\" menu.) The resulting page or pop-up shows that the browser is already up to date or displays the refresh process.\n\nMozilla upgrades Firefox every four weeks; the last refresh was on Feb. 23.",
+      "date": "06/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 110,
+      "img": "https://images.idgesg.net/images/article/2021/01/microsoft_edge_browser_logo_3x2_1420x947-100875407-large.jpg",
+      "title": "What's in the latest Edge update? Vertical tabs for all, and faster start-ups",
+      "preview": "",
+      "content": "Microsoft last week upgraded its Edge browser to version 89, delivering vertical tabs to all customers and improving startup times up to 41%. The Redmond, Wash. company also patched at least 33 security vulnerabilities before releasing Edge 89.\n\n(Note: Starting Jan. 21, Microsoft began \"...releasing the Chrome CVEs that are included in the new releases of Microsoft Edge (Chromium-based) directly in the Security Update Guide.\" For more information on what that meant, head to this explanation.)\n\nAlthough Edge will update automatically in the background, to force an upgrade, select \"About Microsoft Edge\" from the Help and Feedback menu under the ellipsis at the upper right; the resulting tab shows that the browser has been updated or displays the download process before presenting a \"Restart\" button.",
+      "date": "07/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 111,
+      "img": "https://images.idgesg.net/images/article/2018/07/chrome_browser_logos_by_gerd_altmann_cc0_via_pixabay_1200x800-100765584-large.jpg",
+      "title": "Google matches Mozilla, reduces time between Chrome upgrades to four weeks",
+      "preview": "",
+      "content": "Google plans to accelerate Chrome's release schedule to match rival Firefox's every-four-week cadence.\n\nThe Mountain View, Calif. company will also offer a new release channel, dubbed \"Extended Stable,\" that will be refreshed every eight weeks, aimed at enterprises weary of frequent deployments.\n\n\"As we have improved our testing and release processes for Chrome and deployed bi-weekly security updates to improve our patch gap, it became clear that we could shorten our release cycle and deliver new features more quickly,\" Alex Mineer, technical program manager, Chrome operations, wrote in a March 4 post to the Chromium blog.\n\n[ Related: Online privacy: Best browsers, settings, and tips ]\nGoggle's reasoning for the new tempo was identical to Mozilla's rationale for speeding up Firefox in September 2019. Then, two Mozilla officials cited the same more-stuff-faster grounds. \"We're adjusting our cadence to increase our agility, and bring you new features more quickly,\" said Ritu Kothari and Yan Or, the Firefox release management team leader and senior director of product integrity, respectively.",
+      "date": "07/04/2021",
+      "author": "News-Room.info"
+    },
+    {
+      "id": 112,
+      "img": "https://images.idgesg.net/images/article/2020/12/in-meeting-reaction-hand-gesture-100870294-large.jpg",
+      "title": "Cisco continues to overhaul Webex, now with real-time language transcription",
+      "preview": "",
+      "content": "Having announced more than 50 planned innovations at its WebexOne event in December, Cisco’s Webex is rolling out another of those capabilities today: real-time language translation. The feature will be available in Webex as a preview starting this month, with general availability in May.\n\nUsers of the platform will soon be able to have their in-meeting speech translated in real time from an expanded library of over 100 languages, including Maori, Zulu and Armenian. The plethora of new languages underlines Cisco’s aim to “power an inclusive future for all.” The feature was initially unveiled with only nine perspective languages in the works.\n\nJeetu Patel, senior vice president and general manager of security and applications, said Cisco has made “north of a billion dollars” worth of investments in AI, including the acquisition of Voicea in 2019, a company specializing in meeting transcription, voice search, and meeting action items. Without providing specifics, Patel claimed that accuracy rates with real-time transcription are “starting to get exciting.”",
+      "date": "08/04/2021",
+      "author": "News-Room.info"
+    }
+  ]
+}
