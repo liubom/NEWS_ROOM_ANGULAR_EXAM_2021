@@ -2,7 +2,6 @@ import { Component, OnInit, Input} from '@angular/core';
 import {IArticle} from "../../interfaces/article";
 import {ActivatedRoute} from "@angular/router";
 import {ArticlesService} from "../articles-list/articles.service";
-import {IHero} from "../../../../../app6rout/interfaces/hero";
 
 @Component({
   selector: 'app-article-details',
@@ -15,7 +14,6 @@ export class ArticleDetailsComponent implements OnInit {
   articleId!: number;
 
   constructor(private route: ActivatedRoute, private articlesService: ArticlesService) {
-
 
     this.articleId = Number(this.route.snapshot.paramMap.get('id'));
 

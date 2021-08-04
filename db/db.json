@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "id": 99,
+      "img": "https://images.idgesg.net/images/article/2018/08/7_safe-browswer-search_legitimate-url-domains_surfing-the-internet-100768649-large.jpg",
+      "title": "Google abandons URL shortening in Chrome?",
+      "preview": "The move, which was unveiled last August, 'didn't move relevant security metrics,' according to a Google staff software engineer on the Chrome team.",
+      "content": "Google has called quits on the notion of truncating URLs in Chrome, according to a note from earlier this month in the Chromium project's bug database.\n\n\"This experiment didn't move relevant security metrics, so we're not going to launch it,\" Emily Stark, a staff software engineer on the Chrome team, wrote in the June 7 entry.\n\nAndroid Police first reported on Stark's note June 10.\n\n[ Related: 9 steps to lock down corporate browsers ]\nStark's notification, which referred to what Chromium — the open-source project that produces code for Chrome and several other browsers, including Microsoft's Edge — called the \"simplified domain\" experiment, put a end to efforts designed to abridge what shows in the browser's address bar.\n\nIn August 2020, Google announced — Stark was one of the trio of engineers who penned the declaration — that it would run trials with some Chrome users that would hide much of a site's URL. The idea, Google said, was to foil phishing attacks.\n\n\"Our goal is to understand — through real-world usage — whether showing URLs this way helps users realize they're visiting a malicious website, and protects them from phishing and social engineering attacks,\" the engineers said.\n\nThe trials began with Chrome 86, which launched in early October 2020.\n\n[ Learn how leading CIOs are reinventing IT. Download CIO's new Think Tank report today! ]\nRather than display all of an URL, Chrome instead condensed it to what Google called the \"registrable domain,\" or its most significant part. If the full URL for, say, a Computerworld article was https://www.computerworld.com/article/3082024/google-android-chrome-os-flip-flops.html, then the registrable domain — and the only bit that would show in the address bar — would be computerworld.com. By doing so, the thinking went, URLs that tried to obfuscate the domain by padding the actual address with — sticking to the same example — computerworld.com elsewhere in a long string, would be exposed.",
+      "date": "16/06/2021",
+      "author": "News-Room.info"
+    },
+    {
       "id": 100,
       "img": "https://images.idgesg.net/images/article/2020/05/ip_winners-and-losers_chess_check-mate_by-rawf8-getty-images_1190439498-100840985-large.jpg",
       "title": "Is JavaScript the new Java?",

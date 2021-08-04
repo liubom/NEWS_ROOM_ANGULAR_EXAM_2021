@@ -12,8 +12,6 @@ export class ArticlesListComponent implements OnInit {
   articlesList: IArticle[] = [];
 
   constructor(private articlesService: ArticlesService) {
-
-    this.fetchArticles();
   }
 
   fetchArticles(){
@@ -21,6 +19,7 @@ export class ArticlesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.fetchArticles();
   }
 
 }
