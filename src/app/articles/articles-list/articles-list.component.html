@@ -1,2 +1,22 @@
-<p>All Articles</p>
-<a *ngFor="let article of articlesList" [routerLink]="['/article', article.id]">{{article.title}}</a>
+<section class="articles-content-wrapper">
+  <p>All Articles</p>
+  <section class="all-articles">
+    <article class="article" *ngFor="let article of articlesList">
+      <div class="article-img">
+        <img src="{{article.img}}" alt="{{article.title}}">
+      </div>
+      <h3 class="article-title">{{article.title}}</h3>
+      <div class="article-text-content">
+        <p class="article-text">{{article.content.split('.', 3)}}...</p>
+        <a *ngIf="false" [routerLink]="['/article', article.id]">{{article.title}}</a>
+      </div>
+      <div class="article-extras">
+        <button>add comment</button>
+        <button>view comment</button>
+        <button>like this article</button>
+      </div>
+    </article>
+  </section>
+</section>
+
+

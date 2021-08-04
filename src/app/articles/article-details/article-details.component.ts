@@ -8,6 +8,7 @@ import {ArticlesService} from "../articles-list/articles.service";
   templateUrl: './article-details.component.html',
   styleUrls: ['./article-details.component.css']
 })
+
 export class ArticleDetailsComponent implements OnInit {
 
   article!: IArticle;
