@@ -1,1 +1,2 @@
-<p>articles-list works!</p>
+<p>All Articles</p>
+<a *ngFor="let article of articlesList" [routerLink]="['/article', article.id]">{{article.title}}</a>

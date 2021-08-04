@@ -1,0 +1,9 @@
+a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: lightblue;
+  padding: 7px;
+}
