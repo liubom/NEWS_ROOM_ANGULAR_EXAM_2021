@@ -3,10 +3,11 @@ import {RouterModule, Routes} from '@angular/router';
 import {ArticlesListComponent} from "./articles-list/articles-list.component";
 import {ArticleDetailsComponent} from "./article-details/article-details.component";
 import {AddArticleComponent} from "./add-article/add-article.component";
+import {AuthGuard} from "../auth.guard";
 
 const routes: Routes = [
   {path: 'articles', component: ArticlesListComponent},
-  {path: 'article/:id', component: ArticleDetailsComponent},
+  {path: 'article/:id', component: ArticleDetailsComponent, canActivate: [AuthGuard]},
   {path: 'add-article', component: AddArticleComponent},
   {path: '', redirectTo: '/articles', pathMatch: 'full'}
 ];

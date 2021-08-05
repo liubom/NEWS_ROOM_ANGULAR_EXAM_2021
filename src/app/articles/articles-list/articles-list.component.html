@@ -2,26 +2,29 @@
   <p>All Articles</p>
   <button (click)="logInOut()">{{loggedIn ? 'Sign Out' : 'Sign In'}}</button>
   <button (click)="addNewArticle()">Add New Article</button>
-  <section class="all-articles">
+  <section *ngIf="articlesList.length > 0; else l" class="all-articles">
     <article class="article" *ngFor="let article of articlesList">
-      <div class="article-img">
-        <img src="{{article.img}}" alt="{{article.title}}">
-      </div>
-      <h3 class="article-title">{{article.title}}</h3>
-      <div class="article-text-content">
-        <p class="article-text">{{article.content.split('.', 3)}}...</p>
-        <a *ngIf="loggedIn; else loggedOut" [routerLink]="['/article', article.id]">[read full article]</a>
-        <ng-template #loggedOut>
-          <a>[Sign in to read full article]</a>
-        </ng-template>
-      </div>
-      <div class="article-extras" *ngIf="loggedIn">
-        <button>add comment</button>
-        <button>view comment</button>
-        <button (click)="likeArticle(article.id)">like this article</button>
-      </div>
+        <div class="article-img">
+          <img src="{{article.img}}" alt="{{article.title}}">
+        </div>
+        <h3 class="article-title">{{article.title}}</h3>
+        <div class="article-text-content">
+          <p class="article-text">{{article.content.split('.', 3)}}...</p>
+          <a *ngIf="loggedIn; else loggedOut" [routerLink]="['/article', article.id]">[read full article]</a>
+          <ng-template #loggedOut>
+            <a>[Sign in to read full article]</a>
+          </ng-template>
+        </div>
+        <div class="article-extras" *ngIf="loggedIn">
+          <button>add comment</button>
+          <button>view comment</button>
+          <button (click)="likeArticle(article.id)">like this article</button>
+        </div>
     </article>
   </section>
+  <ng-template #l>
+    <h3>Loading Articles...</h3>
+  </ng-template>
 </section>
 
 

@@ -12,6 +12,8 @@ import {switchMap, tap} from "rxjs/operators";
 
 export class ArticleDetailsComponent implements OnInit {
 
+
+  signetIn: boolean = false;
   article: IArticle | undefined;
   // articleId!: number;
 
