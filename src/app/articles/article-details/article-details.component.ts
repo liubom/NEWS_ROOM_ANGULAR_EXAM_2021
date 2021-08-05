@@ -2,6 +2,7 @@ import { Component, OnInit, Input} from '@angular/core';
 import {IArticle} from "../../interfaces/article";
 import {ActivatedRoute} from "@angular/router";
 import {ArticlesService} from "../articles-list/articles.service";
+import {switchMap, tap} from "rxjs/operators";
 
 @Component({
   selector: 'app-article-details',
@@ -11,16 +12,22 @@ import {ArticlesService} from "../articles-list/articles.service";
 
 export class ArticleDetailsComponent implements OnInit {
 
-  article!: IArticle;
-  articleId!: number;
+  article: IArticle | undefined;
+  // articleId!: number;
 
   constructor(private route: ActivatedRoute, private articlesService: ArticlesService) {
 
-    this.articleId = Number(this.route.snapshot.paramMap.get('id'));
+    // V1 this.articleId = Number(this.route.snapshot.paramMap.get('id'));
 
-    this.articlesService
-      .getArticle(this.articleId)
-      .subscribe(article => this.article = article);
+    // V2 this.articlesService
+    //   .getArticle(this.route.snapshot.params.id)
+    //   .subscribe(article => this.article = article);
+
+    this.route.params.pipe(
+      tap(() => this.article = undefined),
+      switchMap(({id}) => this.articlesService.getArticle(id))
+    ).subscribe(article => this.article = article)
+
   }
 
   ngOnInit(): void {

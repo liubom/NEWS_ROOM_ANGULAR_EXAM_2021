@@ -11,11 +11,11 @@ export class ArticlesService {
   constructor(private http: HttpClient) { }
 
   loadArticles(): Observable<Array<IArticle>> {
-    return this.http.get<Array<IArticle>>('http://localhost:5000/articles');
+    return this.http.get<Array<IArticle>>('http://localhost:5001/articles');
   }
 
   getArticle(id: number){
-    return this.http.get<IArticle>(`http://localhost:5000/articles/` + id);
+    return this.http.get<IArticle>(`http://localhost:5001/articles/` + id);
   }
 }
 
