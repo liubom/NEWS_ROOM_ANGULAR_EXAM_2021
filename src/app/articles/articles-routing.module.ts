@@ -4,13 +4,14 @@ import {ArticlesListComponent} from "./articles-list/articles-list.component";
 import {ArticleDetailsComponent} from "./article-details/article-details.component";
 import {AddArticleComponent} from "./add-article/add-article.component";
 import {AuthGuard} from "../auth.guard";
-import {ArticlesFavComponent} from "../articles-fav/articles-fav.component";
+import {ArticlesFavComponent} from "./articles-fav/articles-fav.component";
 
 const routes: Routes = [
   {path: 'articles', component: ArticlesListComponent},
   {path: 'article/:id', component: ArticleDetailsComponent, canActivate: [AuthGuard]},
   {path: 'add-article', component: AddArticleComponent},
   {path: 'favorites', component: ArticlesFavComponent},
+  {path: 'search', component: ArticlesFavComponent},
   {path: '', redirectTo: '/articles', pathMatch: 'full'}
 ];
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {IArticle} from "../../interfaces/article";
 import {ActivatedRoute} from "@angular/router";
 import {ArticlesService} from "../articles-list/articles.service";
@@ -13,8 +13,9 @@ import {switchMap, tap} from "rxjs/operators";
 export class ArticleDetailsComponent implements OnInit {
 
 
-  signetIn: boolean = false;
+  signetIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
   article: IArticle | undefined;
+
   // articleId!: number;
 
   constructor(private route: ActivatedRoute, private articlesService: ArticlesService) {
@@ -30,6 +31,14 @@ export class ArticleDetailsComponent implements OnInit {
       switchMap(({id}) => this.articlesService.getArticle(id))
     ).subscribe(article => this.article = article)
 
+  }
+
+  addComment(id: number, title: string) {
+    console.log(`Comment to article: ${title}`);
+  }
+
+  viewComments(id: number, title: string) {
+    console.log(`Viewing comments to article ${title}`);
   }
 
   likeArticle(id: number) {

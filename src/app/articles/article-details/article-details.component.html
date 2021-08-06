@@ -9,8 +9,8 @@
       <time>{{article.date}}</time>
       <p class="article-author">{{article.author}}</p>
       <section class="article-extras">
-        <button>add comment</button>
-        <button>view comment</button>
+        <button (click)="addComment(article.id, article.title)">add comment</button>
+        <button (click)="viewComments(article.id, article.title)">view comment</button>
         <button (click)="likeArticle(article.id)">like this article</button>
       </section>
     </div>

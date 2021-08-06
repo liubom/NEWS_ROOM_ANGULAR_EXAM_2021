@@ -11,8 +11,11 @@ import {ArticlesModule} from "./articles/articles.module";
 import {PageNoteFoundComponent} from './page-note-found/page-note-found.component';
 import {LoginComponent} from './login/login.component';
 import {AuthGuard} from "./auth.guard";
-import {ArticlesFavComponent} from './articles-fav/articles-fav.component';
+import {ArticlesFavComponent} from './articles/articles-fav/articles-fav.component';
 import {UsersModule} from "./users/users.module";
+import { ArticlesSearchComponent } from './articles/articles-search/articles-search.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import {UsersModule} from "./users/users.module";
     PageNoteFoundComponent,
     LoginComponent,
     ArticlesFavComponent,
+    ArticlesSearchComponent,
+    AboutUsComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,7 @@ import {UsersModule} from "./users/users.module";
     CoreModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     ArticlesService,

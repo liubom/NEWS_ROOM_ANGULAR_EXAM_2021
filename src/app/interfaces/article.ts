@@ -1,3 +1,5 @@
+import {IArticleComment} from "./article-comment";
+
 export interface IArticle {
   id: number;
   img: string;
@@ -6,4 +8,5 @@ export interface IArticle {
   content: string;
   date: string;
   author: string;
+  comments: IArticleComment[];
 }
