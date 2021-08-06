@@ -1,13 +1,14 @@
 <section class="articles-content-wrapper">
   <p>All Articles</p>
   <button (click)="logInOut()">{{loggedIn ? 'Sign Out' : 'Sign In'}}</button>
+  <button *ngIf="!loggedIn" (click)="registerUser()">Register</button>
   <button (click)="addNewArticle()">Add New Article</button>
   <section *ngIf="articlesList.length > 0; else l" class="all-articles">
     <article class="article" *ngFor="let article of articlesList">
+      <h3 class="article-title">{{article.title}}</h3>
         <div class="article-img">
           <img src="{{article.img}}" alt="{{article.title}}">
         </div>
-        <h3 class="article-title">{{article.title}}</h3>
         <div class="article-text-content">
           <p class="article-text">{{article.content.split('.', 3)}}...</p>
           <a *ngIf="loggedIn; else loggedOut" [routerLink]="['/article', article.id]">[read full article]</a>
@@ -17,7 +18,7 @@
         </div>
         <div class="article-extras" *ngIf="loggedIn">
           <button>add comment</button>
-          <button>view comment</button>
+          <button>view comments</button>
           <button (click)="likeArticle(article.id)">like this article</button>
         </div>
     </article>

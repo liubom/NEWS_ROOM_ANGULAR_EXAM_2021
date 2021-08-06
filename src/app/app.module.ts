@@ -10,16 +10,21 @@ import {HttpClientModule} from "@angular/common/http";
 import {ArticlesModule} from "./articles/articles.module";
 import {PageNoteFoundComponent} from './page-note-found/page-note-found.component';
 import {LoginComponent} from './login/login.component';
+import {AuthGuard} from "./auth.guard";
+import {ArticlesFavComponent} from './articles-fav/articles-fav.component';
+import {UsersModule} from "./users/users.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNoteFoundComponent,
     LoginComponent,
+    ArticlesFavComponent,
   ],
   imports: [
     BrowserModule,
     ArticlesModule,
+    UsersModule,
     CoreModule,
     AppRoutingModule,
     HttpClientModule,
@@ -27,6 +32,7 @@ import {LoginComponent} from './login/login.component';
   ],
   providers: [
     ArticlesService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })

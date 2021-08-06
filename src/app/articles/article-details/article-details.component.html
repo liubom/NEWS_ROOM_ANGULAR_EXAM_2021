@@ -1,7 +1,21 @@
 <div *ngIf="article; else loading">
-  <h3>{{article?.title}}</h3>
+  <h3 class="article-title">{{article?.title}}</h3>
+  <div class="article-image-container">
+    <img class="article-image" src="{{article?.img}}" alt="{{article?.title}}">
+  </div>
+  <article class="article-container">
+    <p class="article-text-content">{{article.content}}</p>
+    <div class="article-sub-elements">
+      <time>{{article.date}}</time>
+      <p class="article-author">{{article.author}}</p>
+      <section class="article-extras">
+        <button>add comment</button>
+        <button>view comment</button>
+        <button (click)="likeArticle(article.id)">like this article</button>
+      </section>
+    </div>
+  </article>
   <button [routerLink]="['/article', article.id + 1]">Next</button>
-  <img src="{{article?.img}}" alt="{{article?.title}}">
 </div>
 <ng-template #loading>
   <h3>Loading....</h3>

@@ -32,6 +32,10 @@ export class ArticleDetailsComponent implements OnInit {
 
   }
 
+  likeArticle(id: number) {
+    console.log('Article Liked...' + id);
+  }
+
   ngOnInit(): void {
   }
 }

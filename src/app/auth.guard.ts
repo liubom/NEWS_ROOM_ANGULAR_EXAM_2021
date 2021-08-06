@@ -3,13 +3,10 @@ import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTre
 import {Observable} from 'rxjs';
 
 @Injectable(
-  {
-    providedIn: 'root'
-  }
 )
 export class AuthGuard implements CanActivate {
 
-  private isAuthenticated = false;
+  private isAuthenticated = true;
 
   constructor(private router: Router) {
   }
