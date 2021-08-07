@@ -13,9 +13,11 @@ import {LoginComponent} from './login/login.component';
 import {AuthGuard} from "./auth.guard";
 import {ArticlesFavComponent} from './articles/articles-fav/articles-fav.component';
 import {UsersModule} from "./users/users.module";
-import { ArticlesSearchComponent } from './articles/articles-search/articles-search.component';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactsComponent } from './contacts/contacts.component';
+import {ArticlesSearchComponent} from './articles/articles-search/articles-search.component';
+import {AboutUsComponent} from './about-us/about-us.component';
+import {ContactsComponent} from './contacts/contacts.component';
+import {UserRegisterService} from "./users/user-register.service";
+
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { ContactsComponent } from './contacts/contacts.component';
   providers: [
     ArticlesService,
     AuthGuard,
+    UserRegisterService
   ],
   bootstrap: [AppComponent]
 })

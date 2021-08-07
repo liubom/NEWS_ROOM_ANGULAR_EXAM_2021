@@ -1,4 +1,5 @@
 import {IArticleComment} from "./article-comment";
+import {IUser} from "./user";
 
 export interface IArticle {
   id: number;
@@ -9,4 +10,5 @@ export interface IArticle {
   date: string;
   author: string;
   comments: IArticleComment[];
+  likes: []
 }

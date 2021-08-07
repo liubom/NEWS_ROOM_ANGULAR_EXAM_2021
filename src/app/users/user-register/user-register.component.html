@@ -1,1 +1,12 @@
-<p>user-register works!</p>
+<h3>Register</h3>
+<form (ngSubmit)="register(userForm.value)" #userForm="ngForm">
+  <div>
+    <label>Username</label><input name="username" placeholder="Username" [(ngModel)]="username">
+  </div>
+  <div>You are trying to login as
+    <b>{{username}}</b></div>
+  <div>
+    <label>Password</label><input type="password" name="password" placeholder="Password" [(ngModel)]="password" ngModel required>
+  </div>
+  <button type="submit">Register</button>
+</form>
