@@ -184,10 +184,6 @@
       "username": "@ivan",
       "isAdmin": false,
       "id": 7
-    },
-    {
-      "isAdmin": false,
-      "id": 8
     }
   ]
 }

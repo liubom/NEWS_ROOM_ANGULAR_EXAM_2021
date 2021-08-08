@@ -17,7 +17,7 @@
           </ng-template>
         </div>
         <div class="article-extras" *ngIf="loggedIn">
-          <button (click)="likeArticle(article.id)">like this article</button>
+          <button (click)="likeArticle(article.id)" appLikeBtnChange>like this article</button>
         </div>
     </article>
   </section>

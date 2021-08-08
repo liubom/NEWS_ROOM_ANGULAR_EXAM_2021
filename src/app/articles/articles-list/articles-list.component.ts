@@ -12,6 +12,9 @@ export class ArticlesListComponent implements OnInit {
 
   articlesList: IArticle[] = [];
   loggedIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
+  isLiked: boolean = !!JSON.parse(String(localStorage.getItem(`isLiked`)));
+  mockUser: string = '@liubo';
+  likes: Array<number> | undefined = JSON.parse(<string>localStorage.getItem('likes'));
 
   constructor(private articlesService: ArticlesService, private router: Router) {
   }
@@ -20,8 +23,15 @@ export class ArticlesListComponent implements OnInit {
     this.articlesService.loadArticles().subscribe(articles => this.articlesList = articles);
   }
 
-  likeArticle(id: number) {
-    console.log('Article Liked...' + id);
+  likeArticle(id: number): void {
+    if (!localStorage.getItem('likes')){
+      localStorage.setItem('likes', '[]');
+    }
+
+    if (!this.likes?.includes(id)) {
+      this.likes = [...this.likes!, id];
+      localStorage.setItem('likes', JSON.stringify(this.likes));
+    }
   }
 
   logInOut(): void {
