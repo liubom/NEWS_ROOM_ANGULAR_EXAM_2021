@@ -16,7 +16,11 @@
         </div>
         <div class="article-text-content">
           <p class="article-text">{{article.content.split('.', 3)}}...</p>
-          <a *ngIf="loggedIn; else loggedOut" [routerLink]="['/article', article.id]">[read full article]</a>
+          <div *ngIf="loggedIn; else loggedOut">
+            <p>{{article.date}}</p>
+            <p>{{article.author}}</p>
+            <p><a [routerLink]="['/article', article.id]">[read full article]</a></p>
+          </div>
           <ng-template #loggedOut>
             <a>[Sign in to read full article]</a>
           </ng-template>

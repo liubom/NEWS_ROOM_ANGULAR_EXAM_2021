@@ -8,6 +8,10 @@ import { ViewCommentsComponent } from './view-comments/view-comments.component';
     AddCommentComponent,
     ViewCommentsComponent
   ],
+  exports: [
+    AddCommentComponent,
+    ViewCommentsComponent
+  ],
   imports: [
     CommonModule
   ]

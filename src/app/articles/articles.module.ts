@@ -10,18 +10,21 @@ import {LikeBtnComponent} from "./like-btn/like-btn.component";
 import {UsersModule} from "../users/users.module";
 
 @NgModule({
-  declarations: [
-    ArticlesListComponent,
-    ArticleDetailsComponent,
-    AddArticleComponent,
-    LikeBtnComponent,
-  ],
-  imports: [
-    CommonModule,
-    ArticlesRoutingModule,
-    CommentsModule,
-    UsersModule,
-  ]
+    declarations: [
+        ArticlesListComponent,
+        ArticleDetailsComponent,
+        AddArticleComponent,
+        LikeBtnComponent,
+    ],
+    exports: [
+        ArticleDetailsComponent
+    ],
+    imports: [
+        CommonModule,
+        ArticlesRoutingModule,
+        CommentsModule,
+        UsersModule,
+    ]
 })
 export class ArticlesModule {
 }

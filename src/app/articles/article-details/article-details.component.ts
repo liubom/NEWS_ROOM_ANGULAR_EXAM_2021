@@ -12,11 +12,12 @@ import {switchMap, tap} from "rxjs/operators";
 
 export class ArticleDetailsComponent implements OnInit {
 
-
   signetIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
   article: IArticle | undefined;
   currUser: string = '@pesho';
   likes: number[] | undefined = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
+  addCommentVisible: boolean = false;
+  viewCommentsVisible: boolean = false;
 
   // articleId!: number;
 
@@ -37,10 +38,12 @@ export class ArticleDetailsComponent implements OnInit {
 
   addComment(id: number, title: string) {
     console.log(`Comment to article: ${title}`);
+    this.addCommentVisible = !this.addCommentVisible;
   }
 
   viewComments(id: number, title: string) {
     console.log(`Viewing comments to article ${title}`);
+    this.viewCommentsVisible = !this.viewCommentsVisible;
   }
 
   likeArticle(id: number): void {

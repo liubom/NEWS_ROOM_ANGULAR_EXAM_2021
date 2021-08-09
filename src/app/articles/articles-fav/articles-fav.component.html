@@ -1,1 +1,3 @@
-<p>articles-fav works!</p>
+<div *ngFor="let article of articlesList">
+  <p>{{article.title}}<a [routerLink]="['/article', article.id]">[read full article]</a></p>
+</div>

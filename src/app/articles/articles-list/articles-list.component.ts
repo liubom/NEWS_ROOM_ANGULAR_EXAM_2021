@@ -1,4 +1,4 @@
-import {Component, OnInit, SimpleChange} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, SimpleChange} from '@angular/core';
 import {ArticlesService} from "./articles.service";
 import {IArticle} from "../../interfaces/article";
 import {Router} from "@angular/router";
@@ -6,7 +6,8 @@ import {Router} from "@angular/router";
 @Component({
   selector: 'app-articles-list',
   templateUrl: './articles-list.component.html',
-  styleUrls: ['./articles-list.component.css']
+  styleUrls: ['./articles-list.component.css'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class ArticlesListComponent implements OnInit {
 
@@ -30,7 +31,6 @@ export class ArticlesListComponent implements OnInit {
       this.likes = [...this.likes!, id];
       localStorage.setItem(`${this.currUser}_likes`, JSON.stringify(this.likes));
     }
-
     console.log(this.likes);
   }
 
@@ -40,7 +40,6 @@ export class ArticlesListComponent implements OnInit {
     if (this.loggedIn){
       this.openSignIn = true;
     }
-
     console.log('From Parent - Articles List');
     console.log(this.openSignIn)
   }
