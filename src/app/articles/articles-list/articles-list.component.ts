@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, SimpleChange} from '@angular/core';
 import {ArticlesService} from "./articles.service";
 import {IArticle} from "../../interfaces/article";
 import {Router} from "@angular/router";
@@ -12,9 +12,11 @@ export class ArticlesListComponent implements OnInit {
 
   articlesList: IArticle[] = [];
   loggedIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
+  openSignIn: boolean = false;
   isLiked: boolean = !!JSON.parse(String(localStorage.getItem(`isLiked`)));
-  mockUser: string = '@liubo';
-  likes: Array<number> | undefined = JSON.parse(<string>localStorage.getItem('likes'));
+  isLiker: boolean = false;
+  currUser: string = '@pesho';
+  likes: number[] | undefined = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
 
   constructor(private articlesService: ArticlesService, private router: Router) {
   }
@@ -24,20 +26,29 @@ export class ArticlesListComponent implements OnInit {
   }
 
   likeArticle(id: number): void {
-    if (!localStorage.getItem('likes')){
-      localStorage.setItem('likes', '[]');
-    }
-
     if (!this.likes?.includes(id)) {
       this.likes = [...this.likes!, id];
-      localStorage.setItem('likes', JSON.stringify(this.likes));
+      localStorage.setItem(`${this.currUser}_likes`, JSON.stringify(this.likes));
     }
+
+    console.log(this.likes);
   }
 
-  logInOut(): void {
+  goLogin(): void {
     localStorage.getItem('loggedIn') === 'true' ? localStorage.setItem('loggedIn', 'false') : localStorage.setItem('loggedIn', 'true');
     this.loggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
-    console.log(this.loggedIn);
+    if (this.loggedIn){
+      this.openSignIn = true;
+    }
+
+    console.log('From Parent - Articles List');
+    console.log(this.openSignIn)
+  }
+
+  toCloseLoginNow(value: boolean){
+    this.openSignIn = value;
+    console.log('From event');
+    console.log(this.openSignIn);
   }
 
   registerUser() {
@@ -53,6 +64,12 @@ export class ArticlesListComponent implements OnInit {
     if (!localStorage.getItem('loggedIn')) {
       localStorage.setItem('loggedIn', 'false');
     }
+
+    if (!localStorage.getItem(`${this.currUser}_likes`)){
+      localStorage.setItem(`${this.currUser}_likes`, "[]");
+    }
   }
+
+
 
 }

@@ -11,7 +11,7 @@
       <section class="article-extras">
         <button (click)="addComment(article.id, article.title)">add comment</button>
         <button (click)="viewComments(article.id, article.title)">view comments</button>
-        <button (click)="likeArticle(article.id)">like this article</button>
+        <app-like-btn [likes]="likes" [articleId]="article.id" (like_article)="likeArticle($event)"></app-like-btn>
       </section>
     </div>
   </article>

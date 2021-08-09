@@ -9,7 +9,6 @@ import {ArticlesService} from "../../../app4ext/src/app/services/articles.servic
 import {HttpClientModule} from "@angular/common/http";
 import {ArticlesModule} from "./articles/articles.module";
 import {PageNoteFoundComponent} from './page-note-found/page-note-found.component';
-import {LoginComponent} from './login/login.component';
 import {AuthGuard} from "./auth.guard";
 import {ArticlesFavComponent} from './articles/articles-fav/articles-fav.component';
 import {UsersModule} from "./users/users.module";
@@ -18,20 +17,18 @@ import {AboutUsComponent} from './about-us/about-us.component';
 import {ContactsComponent} from './contacts/contacts.component';
 import {UserRegisterService} from "./users/user-register.service";
 
-
 @NgModule({
   declarations: [
     AppComponent,
     PageNoteFoundComponent,
-    LoginComponent,
     ArticlesFavComponent,
     ArticlesSearchComponent,
     AboutUsComponent,
     ContactsComponent,
   ],
   imports: [
-    BrowserModule,
     ArticlesModule,
+    BrowserModule,
     UsersModule,
     CoreModule,
     AppRoutingModule,
@@ -42,6 +39,9 @@ import {UserRegisterService} from "./users/user-register.service";
     ArticlesService,
     AuthGuard,
     UserRegisterService
+  ],
+  exports: [
+
   ],
   bootstrap: [AppComponent]
 })

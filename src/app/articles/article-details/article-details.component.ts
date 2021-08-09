@@ -15,6 +15,8 @@ export class ArticleDetailsComponent implements OnInit {
 
   signetIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
   article: IArticle | undefined;
+  currUser: string = '@pesho';
+  likes: number[] | undefined = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
 
   // articleId!: number;
 
@@ -41,8 +43,13 @@ export class ArticleDetailsComponent implements OnInit {
     console.log(`Viewing comments to article ${title}`);
   }
 
-  likeArticle(id: number) {
-    console.log('Article Liked...' + id);
+  likeArticle(id: number): void {
+    if (!this.likes?.includes(id)) {
+      this.likes = [...this.likes!, id];
+      localStorage.setItem(`${this.currUser}_likes`, JSON.stringify(this.likes));
+    }
+
+    console.log(this.likes);
   }
 
   ngOnInit(): void {

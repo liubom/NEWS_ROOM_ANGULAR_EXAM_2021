@@ -1,0 +1,4 @@
+<div *ngIf="isLiked; else notLiked" [ngStyle]="{backgroundColor: 'lightgreen', width: '140px', display: 'inline-block'}">You like this article</div>
+<ng-template #notLiked>
+  <button (click)="likeArticle()" [ngClass]="'notLikedd'">like this article</button>
+</ng-template>

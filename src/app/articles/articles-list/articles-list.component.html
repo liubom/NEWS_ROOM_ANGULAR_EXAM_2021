@@ -1,8 +1,13 @@
 <section class="articles-content-wrapper">
   <p>All Articles</p>
-  <button (click)="logInOut()">{{loggedIn ? 'Sign Out' : 'Sign In'}}</button>
-  <button *ngIf="!loggedIn" (click)="registerUser()">Register</button>
-  <button (click)="addNewArticle()">Add New Article</button>
+  <button (click)="goLogin()">{{loggedIn ? 'Log Out' : 'Log In'}}</button>
+  <div *ngIf="loggedIn else register"><button (click)="addNewArticle()">Add New Article</button></div>
+  <ng-template #register>
+    <div>
+      <button *ngIf="!loggedIn" (click)="registerUser()">Register</button>
+    </div>
+  </ng-template>
+  <app-login *ngIf="openSignIn" (toCloseLogin)="toCloseLoginNow($event)"></app-login>
   <section *ngIf="articlesList.length > 0; else l" class="all-articles">
     <article class="article" *ngFor="let article of articlesList">
       <h3 class="article-title">{{article.title}}</h3>
@@ -15,9 +20,9 @@
           <ng-template #loggedOut>
             <a>[Sign in to read full article]</a>
           </ng-template>
-        </div>
-        <div class="article-extras" *ngIf="loggedIn">
-          <button (click)="likeArticle(article.id)" appLikeBtnChange>like this article</button>
+          <div class="article-extras" *ngIf="loggedIn">
+            <app-like-btn [likes]="likes" [articleId]="article.id" (like_article)="likeArticle($event)"></app-like-btn>
+          </div>
         </div>
     </article>
   </section>
