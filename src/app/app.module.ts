@@ -16,6 +16,7 @@ import {ArticlesSearchComponent} from './articles/articles-search/articles-searc
 import {AboutUsComponent} from './about-us/about-us.component';
 import {ContactsComponent} from './contacts/contacts.component';
 import {UserRegisterService} from "./users/user-register.service";
+import {CommentsModule} from "./articles/comments/comments.module";
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {UserRegisterService} from "./users/user-register.service";
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    CommentsModule,
   ],
   providers: [
     ArticlesService,
@@ -41,7 +43,6 @@ import {UserRegisterService} from "./users/user-register.service";
     UserRegisterService
   ],
   exports: [
-
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,9 @@
 <section class="articles-content-wrapper">
   <p>All Articles</p>
-  <button (click)="goLogin()">{{loggedIn ? 'Log Out' : 'Log In'}}</button>
+  <button (click)="goLogin()" *ngIf="!loggedIn else logout">Log In</button>
+  <ng-template #logout>
+    <button (click)="logOut()">Log Out</button>
+  </ng-template>
   <div *ngIf="loggedIn else register"><button (click)="addNewArticle()">Add New Article</button></div>
   <ng-template #register>
     <div>

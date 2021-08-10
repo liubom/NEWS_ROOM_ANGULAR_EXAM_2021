@@ -1,3 +1,10 @@
-<div *ngFor="let article of articlesList">
-  <p>{{article.title}}<a [routerLink]="['/article', article.id]">[read full article]</a></p>
+<div *ngIf="articlesList.length > 0 else empty">
+  <h2>Your favorite articles are here, read them again.</h2>
+  <div *ngFor="let article of articlesList">
+    <p>{{article.title}}<a [routerLink]="['/article', article.id]">[read full article]</a></p>
+  </div>
 </div>
+<ng-template #empty let-test>
+  <h2>It's empty now, but you can always add your favorite articles here. {{test}}</h2>
+</ng-template>
+

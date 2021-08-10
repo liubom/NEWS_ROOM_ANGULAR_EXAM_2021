@@ -14,10 +14,8 @@ export class ArticlesListComponent implements OnInit {
   articlesList: IArticle[] = [];
   loggedIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
   openSignIn: boolean = false;
-  isLiked: boolean = !!JSON.parse(String(localStorage.getItem(`isLiked`)));
-  isLiker: boolean = false;
-  currUser: string = '@pesho';
-  likes: number[] | undefined = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
+  currUser: string | null = '';
+  likes: number[] = [];
 
   constructor(private articlesService: ArticlesService, private router: Router) {
   }
@@ -27,27 +25,36 @@ export class ArticlesListComponent implements OnInit {
   }
 
   likeArticle(id: number): void {
+   this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
     if (!this.likes?.includes(id)) {
       this.likes = [...this.likes!, id];
       localStorage.setItem(`${this.currUser}_likes`, JSON.stringify(this.likes));
     }
-    console.log(this.likes);
+  }
+
+  logOut(){
+    localStorage.setItem('loggedIn', 'false');
+    localStorage.setItem('currentUser', '');
+    this.loggedIn = false;
   }
 
   goLogin(): void {
-    localStorage.getItem('loggedIn') === 'true' ? localStorage.setItem('loggedIn', 'false') : localStorage.setItem('loggedIn', 'true');
+    localStorage.getItem('loggedIn') === 'true' ? localStorage.setItem('loggedIn', 'false') : false;
     this.loggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
-    if (this.loggedIn){
-      this.openSignIn = true;
-    }
-    console.log('From Parent - Articles List');
-    console.log(this.openSignIn)
+
+    this.openSignIn = true;
   }
 
-  toCloseLoginNow(value: boolean){
-    this.openSignIn = value;
-    console.log('From event');
-    console.log(this.openSignIn);
+  toCloseLoginNow(value: any) { //From Event
+    this.openSignIn = false;
+    if (!this.loggedIn) {
+      this.loggedIn = true;
+      this.currUser = `${value.user}`;
+      if (!localStorage.getItem(`${this.currUser}_likes`)) {
+        localStorage.setItem(`${this.currUser}_likes`, "[]");
+      }
+      console.log(this.currUser);
+    }
   }
 
   registerUser() {
@@ -60,15 +67,15 @@ export class ArticlesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchArticles();
-    if (!localStorage.getItem('loggedIn')) {
-      localStorage.setItem('loggedIn', 'false');
+
+    if(localStorage.getItem('currentUser') !== '') {
+      this.currUser = localStorage.getItem('currentUser');
+      console.log(this.currUser);
+      this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
     }
 
-    if (!localStorage.getItem(`${this.currUser}_likes`)){
-      localStorage.setItem(`${this.currUser}_likes`, "[]");
+    else {
+      console.log('No current User...');
     }
   }
-
-
-
 }

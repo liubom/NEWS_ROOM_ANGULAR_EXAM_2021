@@ -12,9 +12,8 @@ import {switchMap, tap} from "rxjs/operators";
 
 export class ArticleDetailsComponent implements OnInit {
 
-  signetIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
   article: IArticle | undefined;
-  currUser: string = '@pesho';
+  currUser: string | null = localStorage.getItem('currentUser');
   likes: number[] | undefined = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
   addCommentVisible: boolean = false;
   viewCommentsVisible: boolean = false;

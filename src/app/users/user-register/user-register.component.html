@@ -1,10 +1,41 @@
 <h3>Register</h3>
 <form (ngSubmit)="register(userForm.value)" #userForm="ngForm">
   <div>
-    <label>Username</label><input name="username" placeholder="Username" [(ngModel)]="username">
+    <label>Username</label>
+    <ul *ngIf="userForm.invalid && userForm.touched">
+      <li *ngIf="username.errors?.required">
+        User name is Required!
+      </li>
+      <li *ngIf="username.errors?.minlength">
+        Min characters 6!
+      </li>
+    </ul>
+    <input name="username" id="username" placeholder="Username" #username='ngModel' ngModel required [minlength]="6">
   </div>
   <div>
-    <label>Password</label><input type="password" name="password" placeholder="Password" [(ngModel)]="password" ngModel required>
+    <ul *ngIf="userForm.invalid && userForm.touched">
+      <li *ngIf="password.errors?.required">
+        Password is Required!
+      </li>
+      <li *ngIf="password.errors?.minlength">
+        Min characters 6!
+      </li>
+    </ul>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Password" #password='ngModel' ngModel required
+           [minlength]="6">
+  </div>
+  <div>
+    <ul *ngIf="userForm.invalid && userForm.touched">
+      <li *ngIf="repassword.errors?.required">
+        Confirm your password is Required!
+      </li>
+      <li *ngIf="repassword.errors?.minlength">
+        Min characters 6!
+      </li>
+    </ul>
+    <label for="repassword">Confirm password</label>
+    <input type="password" name="repassword" id="repassword" placeholder="Password" #repassword='ngModel' ngModel required>
   </div>
   <button type="submit">Register</button>
 </form>

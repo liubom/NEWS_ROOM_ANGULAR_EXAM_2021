@@ -9,15 +9,15 @@ import {LoginComponent} from "./login/login.component";
 @NgModule({
   declarations: [
     UserRegisterComponent,
-    LoginComponent
+    LoginComponent,
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     CommonModule,
     FormsModule,
-    UsersRoutingModule
+    UsersRoutingModule,
   ]
 
 })
