@@ -38,6 +38,8 @@ export class LoginComponent{
 
     this.open = !this.open;
     this.toCloseLogin.emit({open: false, user: form.form.controls.user.value});
+
+    form.reset('');
   }
 
   cancelLogin(){

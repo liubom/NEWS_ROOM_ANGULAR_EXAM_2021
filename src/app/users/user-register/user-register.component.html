@@ -1,5 +1,5 @@
 <h3>Register</h3>
-<form (ngSubmit)="register(userForm.value)" #userForm="ngForm">
+<form (ngSubmit)="register(userForm)" #userForm="ngForm">
   <div>
     <label>Username</label>
     <ul *ngIf="userForm.invalid && userForm.touched">
@@ -25,17 +25,17 @@
     <input type="password" name="password" id="password" placeholder="Password" #password='ngModel' ngModel required
            [minlength]="6">
   </div>
-  <div>
-    <ul *ngIf="userForm.invalid && userForm.touched">
-      <li *ngIf="repassword.errors?.required">
-        Confirm your password is Required!
-      </li>
-      <li *ngIf="repassword.errors?.minlength">
-        Min characters 6!
-      </li>
-    </ul>
-    <label for="repassword">Confirm password</label>
-    <input type="password" name="repassword" id="repassword" placeholder="Password" #repassword='ngModel' ngModel required>
-  </div>
+<!--  <div>-->
+<!--        <ul *ngIf="userForm.invalid && userForm.touched">-->
+<!--          <li *ngIf="repassword.errors?.required">-->
+<!--            Confirm your password is Required!-->
+<!--          </li>-->
+<!--          <li *ngIf="repassword.errors?.minlength">-->
+<!--            Min characters 6!-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--        <label for="repassword">Confirm password</label>-->
+<!--        <input type="password" name="repassword" id="repassword" placeholder="Password" #repassword='ngModel' ngModel required>-->
+<!--  </div>-->
   <button type="submit">Register</button>
 </form>
