@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
 )
 export class AuthGuard implements CanActivate {
 
-  private isAuthenticated = true;
+  private isAuthenticated = false;
 
   constructor(private router: Router) {
   }
@@ -19,7 +19,7 @@ export class AuthGuard implements CanActivate {
 
   private checkLogin(): boolean{
 
-    if (this.isAuthenticated) {
+    if (localStorage.getItem('loggedIn')) {
       return true;
     }
 

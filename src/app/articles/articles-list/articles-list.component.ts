@@ -16,6 +16,7 @@ export class ArticlesListComponent implements OnInit {
   openSignIn: boolean = false;
   currUser: string | null = '';
   likes: number[] = [];
+  isAdmin: boolean = false;
 
   constructor(private articlesService: ArticlesService, private router: Router) {
   }
@@ -64,7 +65,7 @@ export class ArticlesListComponent implements OnInit {
       }
 
       this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
-      console.log(this.currUser);
+      // console.log(this.currUser);
     }
   }
 
@@ -79,14 +80,13 @@ export class ArticlesListComponent implements OnInit {
   ngOnInit(): void {
     this.fetchArticles();
 
-    if (localStorage.getItem('currentUser') !== '') {
+    if (!!localStorage.getItem('currentUser') && localStorage.getItem('currentUser') !== '') {
 
       this.currUser = localStorage.getItem('currentUser');
       this.loggedIn = true;
       console.log(this.currUser);
       this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
     }
-
     else {
       console.log('No current User...');
     }

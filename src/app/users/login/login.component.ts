@@ -1,14 +1,16 @@
-import {Component, ElementRef, OnInit, Output} from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {IUser} from "../../interfaces/user";
 import {EventEmitter} from "@angular/core";
 import {NgForm} from "@angular/forms";
+import {UserRegisterService} from "../user-register.service";
+import {filter, map} from "rxjs/operators";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent{
+export class LoginComponent {
 
   username!: IUser;
   password!: IUser;
@@ -16,34 +18,45 @@ export class LoginComponent{
   open: boolean = true;
   loggedIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
 
-  test: string = 'TEST TEXT HERE IN THIS FIELD...';
+  constructor(private usersService: UserRegisterService) {
+  }
 
-  constructor(private element: ElementRef) { }
 
-
-  login(form: NgForm){
+  login(form: NgForm) {
     if (form.invalid) {
-      console.log('Invalid Input');
-      console.log(form.form.controls.user.value);
       return;
     }
 
-    localStorage.setItem('currentUser', `${form.form.controls.user.value}`);
+    //Get all User
+    const {user, password} = form.value;
 
-    localStorage.getItem('loggedIn') === 'true' ? localStorage.setItem('loggedIn', 'false') : localStorage.setItem('loggedIn', 'true');
-    this.loggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
-    this.loggedIn = !this.loggedIn;
-    console.log(this.loggedIn);
-    console.log(form.value);
+    this.usersService
+      .getUsers().pipe(
+      map((u) => u.filter((x) => {
+        return x.username === user && x.password === password;
+      })))
+      .subscribe(data => {
+        if (data.length < 1) {
+          console.log('Wrong Username or Password');
+          return;
+        } else {
+          localStorage.setItem('currentUser', `${user}`);
 
-    this.open = !this.open;
-    this.toCloseLogin.emit({open: false, user: form.form.controls.user.value});
+          // localStorage.getItem('loggedIn') === 'true' ?
+          // localStorage.setItem('loggedIn', 'false') :
+          localStorage.setItem('loggedIn', 'true');
+          // this.loggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
+          // this.loggedIn = !this.loggedIn;
 
-    form.reset('');
+          this.open = !this.open;
+          this.toCloseLogin.emit({open: false, user: user});
+
+          form.reset('');
+        }
+      })
   }
 
-  cancelLogin(){
-    console.log('Login canceled!');
+  cancelLogin() {
     this.open = !this.open;
     this.toCloseLogin.emit(false);
   }
