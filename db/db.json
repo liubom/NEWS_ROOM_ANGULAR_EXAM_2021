@@ -191,6 +191,12 @@
       "password": "123456",
       "isAdmin": false,
       "id": 6
+    },
+    {
+      "username": "@kristina",
+      "password": "123456",
+      "isAdmin": false,
+      "id": 7
     }
   ]
 }

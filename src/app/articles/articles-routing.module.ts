@@ -10,9 +10,9 @@ import {ArticlesSearchComponent} from "./articles-search/articles-search.compone
 const routes: Routes = [
   {path: 'articles', component: ArticlesListComponent},
   {path: 'article/:id', component: ArticleDetailsComponent, canActivate: [AuthGuard]},
-  {path: 'add-article', component: AddArticleComponent},
-  {path: 'favorites', component: ArticlesFavComponent},
-  {path: 'search', component: ArticlesSearchComponent},
+  {path: 'add-article', component: AddArticleComponent, canActivate: [AuthGuard]},
+  {path: 'favorites', component: ArticlesFavComponent, canActivate: [AuthGuard]},
+  {path: 'search', component: ArticlesSearchComponent, canActivate: [AuthGuard]},
   {path: '', redirectTo: '/articles', pathMatch: 'full'}
 ];
 
