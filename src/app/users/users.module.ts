@@ -5,6 +5,7 @@ import {UsersRoutingModule} from './users-routing.module';
 import {UserRegisterComponent} from './user-register/user-register.component';
 import {FormsModule} from "@angular/forms";
 import {LoginComponent} from "./login/login.component";
+import {CoreModule} from "../core/core.module";
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import {LoginComponent} from "./login/login.component";
   exports: [
     LoginComponent,
   ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    UsersRoutingModule,
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+        UsersRoutingModule,
+        CoreModule,
+    ]
 
 })
 export class UsersModule {

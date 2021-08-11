@@ -3,20 +3,27 @@ import {CommonModule} from '@angular/common';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {RouterModule} from "@angular/router";
+import {HeaderLoggedUserDirective} from "../header-logged-user.directive";
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderLoggedUserDirective
   ],
-  imports: [
-    CommonModule,
-    RouterModule,
-  ],
+    imports: [
+        CommonModule,
+        RouterModule,
+    ],
   exports: [
     HeaderComponent,
     FooterComponent,
+    HeaderLoggedUserDirective,
+  ],
+  providers: [
+    HeaderLoggedUserDirective
   ]
+
 })
 export class CoreModule {
 }

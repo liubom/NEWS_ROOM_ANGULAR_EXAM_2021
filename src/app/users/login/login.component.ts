@@ -4,6 +4,7 @@ import {EventEmitter} from "@angular/core";
 import {NgForm} from "@angular/forms";
 import {UserRegisterService} from "../user-register.service";
 import {filter, map} from "rxjs/operators";
+import {HeaderLoggedUserDirective} from "../../header-logged-user.directive";
 
 @Component({
   selector: 'app-login',
@@ -18,9 +19,8 @@ export class LoginComponent {
   open: boolean = true;
   loggedIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
 
-  constructor(private usersService: UserRegisterService) {
+  constructor(private usersService: UserRegisterService, public headerDirective: HeaderLoggedUserDirective) {
   }
-
 
   login(form: NgForm) {
     if (form.invalid) {
@@ -41,10 +41,13 @@ export class LoginComponent {
           return;
         } else {
           localStorage.setItem('currentUser', `${user}`);
+          this.headerDirective.isLoggedIn = true;
 
           // localStorage.getItem('loggedIn') === 'true' ?
           // localStorage.setItem('loggedIn', 'false') :
           localStorage.setItem('loggedIn', 'true');
+          this.headerDirective.likesCounterRefresh();
+
           // this.loggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
           // this.loggedIn = !this.loggedIn;
 

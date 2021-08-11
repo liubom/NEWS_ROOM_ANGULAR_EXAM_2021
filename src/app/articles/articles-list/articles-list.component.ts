@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, OnInit, SimpleChange} from '@angular
 import {ArticlesService} from "./articles.service";
 import {IArticle} from "../../interfaces/article";
 import {Router} from "@angular/router";
+import {HeaderLoggedUserDirective} from "../../header-logged-user.directive";
 
 @Component({
   selector: 'app-articles-list',
@@ -18,7 +19,8 @@ export class ArticlesListComponent implements OnInit {
   likes: number[] = [];
   isAdmin: boolean = false;
 
-  constructor(private articlesService: ArticlesService, private router: Router) {
+  constructor(private articlesService: ArticlesService, private router: Router, public headerDirective: HeaderLoggedUserDirective) {
+  this.headerDirective.likesCounterRefresh();
   }
 
   fetchArticles() {
@@ -39,12 +41,15 @@ export class ArticlesListComponent implements OnInit {
       this.likes = [...this.likes!, id];
       localStorage.setItem(`${this.currUser}_likes`, JSON.stringify(this.likes));
     }
+
+    this.headerDirective.likesCounterRefresh();
   }
 
   logOut() {
     localStorage.setItem('loggedIn', 'false');
     localStorage.setItem('currentUser', '');
     this.loggedIn = false;
+    this.headerDirective.isLoggedIn = false;
   }
 
   goLogin(): void {

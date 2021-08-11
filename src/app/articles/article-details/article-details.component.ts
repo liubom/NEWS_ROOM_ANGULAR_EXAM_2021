@@ -3,6 +3,7 @@ import {IArticle} from "../../interfaces/article";
 import {ActivatedRoute} from "@angular/router";
 import {ArticlesService} from "../articles-list/articles.service";
 import {switchMap, tap} from "rxjs/operators";
+import {HeaderLoggedUserDirective} from "../../header-logged-user.directive";
 
 @Component({
   selector: 'app-article-details',
@@ -20,7 +21,7 @@ export class ArticleDetailsComponent implements OnInit {
 
   // articleId!: number;
 
-  constructor(private route: ActivatedRoute, private articlesService: ArticlesService) {
+  constructor(private route: ActivatedRoute, private articlesService: ArticlesService, public headerDirective: HeaderLoggedUserDirective) {
 
     // V1 this.articleId = Number(this.route.snapshot.paramMap.get('id'));
 
@@ -51,6 +52,7 @@ export class ArticleDetailsComponent implements OnInit {
       localStorage.setItem(`${this.currUser}_likes`, JSON.stringify(this.likes));
     }
 
+    this.headerDirective.likesCounterRefresh();
     console.log(this.likes);
   }
 
