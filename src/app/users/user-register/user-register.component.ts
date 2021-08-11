@@ -30,10 +30,15 @@ export class UserRegisterComponent implements OnInit {
         return x.username === username;
       })))
       .subscribe(data => {
-        return data.length > 0
-          ? console.log('This user exists!')
-          : this.userRegisterService.addUser(username, password, this.isAdmin).subscribe(data => this.newUser = data);
-      })
+        if (data.length > 0) {
+          console.log('This user exists!');
+          return;
+        } else {
+          this.userRegisterService.addUser(username, password, this.isAdmin).subscribe(data => this.newUser = data);
+          localStorage.setItem('currentUser', `${username}`);
+          localStorage.setItem(`${username}_likes`, '[]');
+        }
+      });
 
     userForm.reset('');
   }

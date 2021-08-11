@@ -16,7 +16,7 @@
           <li *ngIf="passwordInput.errors?.minlength">Password should be min 6 characters!</li>
         </ul>
       </div>
-      <button type="submit">Sign In</button>
+      <button [disabled]="form.invalid" type="submit">Sign In</button>
     </form>
     <button (click)="cancelLogin()">Close</button>
   </div>

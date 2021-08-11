@@ -25,14 +25,22 @@ export class ArticlesListComponent implements OnInit {
   }
 
   likeArticle(id: number): void {
-   this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
+    if (!localStorage.getItem(`${this.currUser}_likes`)) {
+      localStorage.setItem(`${this.currUser}_likes`, '[]')
+    }
+    this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
+
+    if (this.likes === null) {
+      this.likes = [];
+    }
+
     if (!this.likes?.includes(id)) {
       this.likes = [...this.likes!, id];
       localStorage.setItem(`${this.currUser}_likes`, JSON.stringify(this.likes));
     }
   }
 
-  logOut(){
+  logOut() {
     localStorage.setItem('loggedIn', 'false');
     localStorage.setItem('currentUser', '');
     this.loggedIn = false;
@@ -50,9 +58,12 @@ export class ArticlesListComponent implements OnInit {
     if (!this.loggedIn) {
       this.loggedIn = true;
       this.currUser = `${value.user}`;
+
       if (!localStorage.getItem(`${this.currUser}_likes`)) {
         localStorage.setItem(`${this.currUser}_likes`, "[]");
       }
+
+      this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
       console.log(this.currUser);
     }
   }
@@ -68,8 +79,10 @@ export class ArticlesListComponent implements OnInit {
   ngOnInit(): void {
     this.fetchArticles();
 
-    if(localStorage.getItem('currentUser') !== '') {
+    if (localStorage.getItem('currentUser') !== '') {
+
       this.currUser = localStorage.getItem('currentUser');
+      this.loggedIn = true;
       console.log(this.currUser);
       this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
     }

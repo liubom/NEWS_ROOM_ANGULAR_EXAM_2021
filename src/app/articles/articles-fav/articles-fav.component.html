@@ -4,7 +4,7 @@
     <p>{{article.title}}<a [routerLink]="['/article', article.id]">[read full article]</a></p>
   </div>
 </div>
-<ng-template #empty let-test>
-  <h2>It's empty now, but you can always add your favorite articles here. {{test}}</h2>
+<ng-template #empty>
+  <h2>It's empty now, but you can always add your favorite articles here.</h2>
 </ng-template>
 

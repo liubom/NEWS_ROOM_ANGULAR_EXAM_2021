@@ -12,7 +12,7 @@ import {filter, map} from "rxjs/operators";
 export class ArticlesFavComponent implements OnInit {
 
   articlesList: IArticle[] = [];
-  currUser: string = '@pesho';
+  currUser: string | null = localStorage.getItem('currentUser');
   likes: number[] | undefined = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
 
   constructor(private articlesService: ArticlesService) { }

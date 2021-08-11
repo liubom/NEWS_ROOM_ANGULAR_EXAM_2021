@@ -163,34 +163,22 @@
       "isAdmin": true
     },
     {
-      "id": 2,
+      "username": "@ivann",
+      "password": "qwertyu",
+      "isAdmin": false,
+      "id": 2
+    },
+    {
       "username": "@mitko",
-      "password": "123456",
-      "isAdmin": false
-    },
-    {
-      "id": 3,
-      "username": "@pesho",
-      "password": "123456",
-      "isAdmin": false
-    },
-    {
-      "username": "@dimo",
-      "password": "123456",
+      "password": "123245678",
       "isAdmin": false,
-      "id": 6
+      "id": 3
     },
     {
-      "username": "@martin",
-      "password": "123456789",
+      "username": "@petar",
+      "password": "qwdefrtyu",
       "isAdmin": false,
-      "id": 7
-    },
-    {
-      "username": "@sdfghjkl",
-      "password": "543543543",
-      "isAdmin": false,
-      "id": 8
+      "id": 4
     }
   ]
 }
