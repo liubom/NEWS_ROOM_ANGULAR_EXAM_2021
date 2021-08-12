@@ -21,7 +21,7 @@ export class LikeBtnComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    if (this.likes!.includes!(this.articleId!)) {
+    if (this.likes && this.likes!.includes!(this.articleId!)) {
       this.isLiked = true;
     }
   }

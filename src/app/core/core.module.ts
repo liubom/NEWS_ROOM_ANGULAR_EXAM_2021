@@ -18,7 +18,7 @@ import {HeaderLoggedUserDirective} from "../header-logged-user.directive";
   exports: [
     HeaderComponent,
     FooterComponent,
-    HeaderLoggedUserDirective,
+    HeaderLoggedUserDirective
   ],
   providers: [
     HeaderLoggedUserDirective

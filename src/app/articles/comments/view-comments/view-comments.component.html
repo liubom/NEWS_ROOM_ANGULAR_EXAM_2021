@@ -1,2 +1,3 @@
-<p>What people thing about: </p>
-<h3></h3>
+<p>What people thing</p>
+<h4>comments: {{filterArticles().length}}</h4>
+<h3 *ngFor="let comment of filterArticles()">{{comment.username}} : {{comment.comment}}</h3>

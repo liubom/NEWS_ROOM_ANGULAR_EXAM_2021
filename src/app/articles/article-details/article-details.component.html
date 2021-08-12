@@ -9,11 +9,9 @@
       <time>{{article.date}}</time>
       <p class="article-author">{{article.author}}</p>
       <section class="article-extras">
-        <button (click)="addComment(article.id, article.title)">add comment</button>
-        <app-add-comment *ngIf="addCommentVisible" [title]="article.title"></app-add-comment>
-        <button (click)="viewComments(article.id, article.title)">view comments</button>
-        <app-view-comments *ngIf="viewCommentsVisible"></app-view-comments>
         <app-like-btn [likes]="likes" [articleId]="article.id" (like_article)="likeArticle($event)"></app-like-btn>
+        <app-add-comment [title]="article.title"></app-add-comment>
+        <app-view-comments></app-view-comments>
       </section>
     </div>
   </article>

@@ -1,9 +1,6 @@
-
-
-
 <nav>
   <a routerLink="/articles" routerLinkActive="active">Articles</a>
-  <a *ngIf="headerDirective.isLoggedIn" routerLink="/favorites" routerLinkActive="active">Favorite articles<span> {{headerDirective.likesCount}}</span></a>
+  <a *ngIf="headerDirective.isLoggedIn" routerLink="/favorites" routerLinkActive="active">Favorite articles<span *ngIf="headerDirective.likesCount > 0"> {{headerDirective.likesCount}}</span></a>
   <a *ngIf="headerDirective.isLoggedIn" routerLink="/search" routerLinkActive="active">Search</a>
   <a routerLink="/about-us" routerLinkActive="active">About Us</a>
   <a routerLink="contacts" routerLinkActive="active">Contacts</a>

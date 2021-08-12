@@ -1,4 +1,5 @@
 export interface IArticleComment {
-  userId: number,
+  postId: number,
+  username: string,
   comment: string
 }

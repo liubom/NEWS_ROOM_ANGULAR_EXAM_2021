@@ -1,6 +1,13 @@
 <p>Add comment to article:</p>
 <h4>{{title}}</h4>
-<form>
-  <textarea></textarea>
-  <button type="submit">sent comment</button>
+<form (ngSubmit)="addNewComment(form)" #form="ngForm">
+  <textarea name="comment" id="comment" #comment='ngModel' ngModel required [minlength]="2"></textarea>
+  <button>sent comment</button>
+  <ul *ngIf="form.invalid && form.touched">
+<!--    <li *ngIf="comment.errors?.required">Write your comment before send.</li>-->
+    <li *ngIf="comment.errors?.minlength">Comment must be more than one character.</li>
+  </ul>
+<div *ngIf="newComment">
+  <p>New comment Added!</p>
+</div>
 </form>

@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { AddCommentComponent } from './add-comment/add-comment.component';
 import { ViewCommentsComponent } from './view-comments/view-comments.component';
 import {FormsModule} from "@angular/forms";
+import { CommentsDirective } from './comments.directive';
 
 @NgModule({
   declarations: [
     AddCommentComponent,
-    ViewCommentsComponent
+    ViewCommentsComponent,
+    CommentsDirective
   ],
   exports: [
     AddCommentComponent,
@@ -16,6 +18,9 @@ import {FormsModule} from "@angular/forms";
   imports: [
     CommonModule,
     FormsModule
+  ],
+  providers: [
+    CommentsDirective
   ]
 })
 export class CommentsModule { }

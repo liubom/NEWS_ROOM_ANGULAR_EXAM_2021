@@ -1,6 +1,9 @@
 import {Directive, Injectable} from '@angular/core';
 
 @Injectable(
+  // {
+  //   providedIn: "root"
+  // }
 )
 
 @Directive({

@@ -2,6 +2,8 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 import {UserRegisterService} from "../user-register.service";
 import {map} from "rxjs/operators";
 import {NgForm} from "@angular/forms";
+import {HeaderLoggedUserDirective} from "../../header-logged-user.directive";
+import {Router, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-user-register',
@@ -15,7 +17,7 @@ export class UserRegisterComponent implements OnInit {
   password!: string;
   newUser: {} = {};
 
-  constructor(private userRegisterService: UserRegisterService, private el: ElementRef) {
+  constructor(private userRegisterService: UserRegisterService, private el: ElementRef, public headerDirective: HeaderLoggedUserDirective, private router: Router) {
   }
 
   register(userForm: NgForm): void {
@@ -35,11 +37,18 @@ export class UserRegisterComponent implements OnInit {
           return;
         } else {
           this.userRegisterService.addUser(username, password, this.isAdmin).subscribe(data => this.newUser = data);
-          localStorage.setItem('currentUser', `${username}`);
-          localStorage.setItem(`${username}_likes`, '[]');
+          if (!localStorage.getItem('currentUser')) {
+            localStorage.setItem('currentUser', `${username}`);
+          }
+
+          this.headerDirective.isLoggedIn = true;
+          this.headerDirective.likesCounterRefresh();
+          this.router.navigate(['/articles']);
+
         }
       });
 
+    localStorage.setItem('loggedIn', 'true');
     userForm.reset('');
   }
 

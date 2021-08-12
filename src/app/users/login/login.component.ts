@@ -3,7 +3,7 @@ import {IUser} from "../../interfaces/user";
 import {EventEmitter} from "@angular/core";
 import {NgForm} from "@angular/forms";
 import {UserRegisterService} from "../user-register.service";
-import {filter, map} from "rxjs/operators";
+import {map} from "rxjs/operators";
 import {HeaderLoggedUserDirective} from "../../header-logged-user.directive";
 
 @Component({
@@ -27,7 +27,6 @@ export class LoginComponent {
       return;
     }
 
-    //Get all User
     const {user, password} = form.value;
 
     this.usersService
@@ -47,8 +46,7 @@ export class LoginComponent {
           // localStorage.setItem('loggedIn', 'false') :
           localStorage.setItem('loggedIn', 'true');
           this.headerDirective.likesCounterRefresh();
-
-          // this.loggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
+          this.headerDirective.isLoggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
           // this.loggedIn = !this.loggedIn;
 
           this.open = !this.open;
