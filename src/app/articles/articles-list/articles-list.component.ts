@@ -61,7 +61,7 @@ export class ArticlesListComponent implements OnInit {
 
   toCloseLoginNow(value: any) { //From Event
     this.openSignIn = false;
-    if (!this.loggedIn) {
+    if (!this.loggedIn && value.user) {
       this.loggedIn = true;
       this.currUser = `${value.user}`;
 
@@ -70,7 +70,6 @@ export class ArticlesListComponent implements OnInit {
       }
 
       this.likes = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
-      // console.log(this.currUser);
     }
   }
 
@@ -78,9 +77,9 @@ export class ArticlesListComponent implements OnInit {
     this.router.navigate(['/register']);
   }
 
-  addNewArticle() {
-    this.router.navigate(['/add-article']);
-  }
+  // addNewArticle() {
+  //   this.router.navigate(['/add-article']);
+  // }
 
   ngOnInit(): void {
     this.fetchArticles();

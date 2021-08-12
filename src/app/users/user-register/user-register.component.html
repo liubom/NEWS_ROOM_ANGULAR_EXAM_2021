@@ -1,4 +1,5 @@
 <h3>Register</h3>
+<h4 *ngIf="userExists">This username is used!</h4>
 <form (ngSubmit)="register(userForm)" #userForm="ngForm">
   <div>
     <label>Username</label>

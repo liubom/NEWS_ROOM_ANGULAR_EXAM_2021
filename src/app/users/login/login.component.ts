@@ -29,32 +29,34 @@ export class LoginComponent {
 
     const {user, password} = form.value;
 
-    this.usersService
-      .getUsers().pipe(
-      map((u) => u.filter((x) => {
-        return x.username === user && x.password === password;
-      })))
-      .subscribe(data => {
-        if (data.length < 1) {
-          console.log('Wrong Username or Password');
-          return;
-        } else {
-          localStorage.setItem('currentUser', `${user}`);
-          this.headerDirective.isLoggedIn = true;
+    if (user && password) {
+      this.usersService
+        .getUsers().pipe(
+        map((u) => u.filter((x) => {
+          return x.username === user && x.password === password;
+        })))
+        .subscribe(data => {
+          if (data.length < 1) {
+            console.log('Wrong Username or Password');
+            return;
+          } else {
+            localStorage.setItem('currentUser', `${user}`);
+            this.headerDirective.isLoggedIn = true;
 
-          // localStorage.getItem('loggedIn') === 'true' ?
-          // localStorage.setItem('loggedIn', 'false') :
-          localStorage.setItem('loggedIn', 'true');
-          this.headerDirective.likesCounterRefresh();
-          this.headerDirective.isLoggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
-          // this.loggedIn = !this.loggedIn;
+            // localStorage.getItem('loggedIn') === 'true' ?
+            // localStorage.setItem('loggedIn', 'false') :
+            localStorage.setItem('loggedIn', 'true');
+            this.headerDirective.likesCounterRefresh();
+            this.headerDirective.isLoggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
+            // this.loggedIn = !this.loggedIn;
 
-          this.open = !this.open;
-          this.toCloseLogin.emit({open: false, user: user});
+            this.open = !this.open;
+            this.toCloseLogin.emit({open: false, user: user});
+            form.reset('');
+          }
+        })
+    }
 
-          form.reset('');
-        }
-      })
   }
 
   cancelLogin() {

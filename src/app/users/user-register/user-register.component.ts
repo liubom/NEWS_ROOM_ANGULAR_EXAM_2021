@@ -16,6 +16,7 @@ export class UserRegisterComponent implements OnInit {
   username!: string;
   password!: string;
   newUser: {} = {};
+  userExists = false;
 
   constructor(private userRegisterService: UserRegisterService, private el: ElementRef, public headerDirective: HeaderLoggedUserDirective, private router: Router) {
   }
@@ -33,11 +34,13 @@ export class UserRegisterComponent implements OnInit {
       })))
       .subscribe(data => {
         if (data.length > 0) {
-          console.log('This user exists!');
+          this.userExists = true;
+          setTimeout(() => this.userExists = false, 2500);
           return;
         } else {
           this.userRegisterService.addUser(username, password, this.isAdmin).subscribe(data => this.newUser = data);
           if (!localStorage.getItem('currentUser')) {
+            localStorage.setItem('loggedIn', 'true');
             localStorage.setItem('currentUser', `${username}`);
           }
 
@@ -47,8 +50,6 @@ export class UserRegisterComponent implements OnInit {
 
         }
       });
-
-    localStorage.setItem('loggedIn', 'true');
     userForm.reset('');
   }
 

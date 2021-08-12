@@ -163,7 +163,20 @@
     }
   ],
   "comments": [
-
+    {
+      "postId": 101,
+      "username": "@daradonka",
+      "comment": "ok",
+      "articleId": "101",
+      "id": 1
+    },
+    {
+      "postId": 101,
+      "username": "@liubo",
+      "comment": "dobre",
+      "articleId": "101",
+      "id": 2
+    }
   ],
   "users": [
     {
@@ -207,6 +220,12 @@
       "password": "123456",
       "isAdmin": false,
       "id": 7
+    },
+    {
+      "username": "@daradonka",
+      "password": "123456",
+      "isAdmin": false,
+      "id": 8
     }
   ]
 }
