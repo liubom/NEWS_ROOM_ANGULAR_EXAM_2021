@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {ArticlesService} from "../articles/articles-list/articles.service";
 
 @Component({
   selector: 'app-page-note-found',
@@ -8,7 +9,9 @@ import {Router} from "@angular/router";
 })
 export class PageNoteFoundComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private articlesService: ArticlesService) { }
+
+  articlesList = this.articlesService.loadArticles();
 
   goHome(){
     this.router.navigate(['/']);

@@ -17,6 +17,11 @@ export class ArticlesService {
   getArticle(id: number){
     return this.http.get<IArticle>(`http://localhost:5001/articles/` + id);
   }
+
+  searchInArticles(str: string){
+    return this.http.get<Array<IArticle>>(`http://localhost:5001/articles?title_like=${str}`);
+  }
+
 }
 
 

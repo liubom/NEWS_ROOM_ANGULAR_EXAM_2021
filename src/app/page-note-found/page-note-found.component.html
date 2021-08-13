@@ -1,2 +1,7 @@
-<p>page-note-found works!</p>
+<p>404 PAGE NOT FOUND</p>
+<P>But the list of our articles was found, shown with the help of 'Async Pipe'</P>
+<ul *ngIf="articlesList | async as articles">
+  <li *ngFor="let article of articles">{{article.title}}</li>
+</ul>
+<p>Go home and read...</p>
 <button (click)="goHome()">Home</button>

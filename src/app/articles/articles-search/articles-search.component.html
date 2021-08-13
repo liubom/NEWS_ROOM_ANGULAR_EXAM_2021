@@ -1,5 +1,9 @@
 <h3>Search for Article</h3>
-<form>
-  <input type="text" placeholder="Search">
+<form (ngSubmit)="searchForArticle(form)" #form="ngForm">
+  <input type="text" placeholder="Search" name="search" id="search" #search="ngModel" ngModel required [minlength]="3">
   <button>search</button>
 </form>
+
+<ul *ngIf="result | async as result">
+  <li *ngFor="let res of result">{{res.title}} <a [routerLink]="['/article', res.id]"> [read this article]</a></li>
+</ul>

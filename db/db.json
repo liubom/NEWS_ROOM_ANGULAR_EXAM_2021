@@ -163,20 +163,7 @@
     }
   ],
   "comments": [
-    {
-      "postId": 101,
-      "username": "@daradonka",
-      "comment": "ok",
-      "articleId": "101",
-      "id": 1
-    },
-    {
-      "postId": 101,
-      "username": "@liubo",
-      "comment": "dobre",
-      "articleId": "101",
-      "id": 2
-    }
+
   ],
   "users": [
     {
@@ -186,46 +173,10 @@
       "isAdmin": true
     },
     {
-      "username": "@stamat",
-      "password": "123456",
-      "isAdmin": false,
-      "id": 2
-    },
-    {
-      "username": "@drisho",
-      "password": "123456",
-      "isAdmin": false,
-      "id": 3
-    },
-    {
-      "username": "@simeon",
-      "password": "123456",
-      "isAdmin": false,
-      "id": 4
-    },
-    {
-      "username": "@hristo",
-      "password": "123456",
-      "isAdmin": false,
-      "id": 5
-    },
-    {
       "username": "@kristina",
       "password": "123456",
       "isAdmin": false,
-      "id": 6
-    },
-    {
-      "username": "@angel",
-      "password": "123456",
-      "isAdmin": false,
-      "id": 7
-    },
-    {
-      "username": "@daradonka",
-      "password": "123456",
-      "isAdmin": false,
-      "id": 8
+      "id": 2
     }
   ]
 }
