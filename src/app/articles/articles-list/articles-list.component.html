@@ -1,3 +1,5 @@
+<p *ngIf="loadingComplete" class="loadingComplete">Lading Complete</p>
+
 <button (click)="goLogin()" *ngIf="!loggedIn else logout">Log In</button>
 <ng-template #logout>
   <button (click)="logOut()">Log Out</button>

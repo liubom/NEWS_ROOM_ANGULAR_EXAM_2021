@@ -18,3 +18,15 @@ img {
   height: 160px;
   object-fit: cover;
 }
+
+.loadingComplete {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  font-family: Verdana, sans-serif;
+  border-radius: 26px;
+}

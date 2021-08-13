@@ -18,13 +18,19 @@ export class ArticlesListComponent implements OnInit {
   currUser: string | null = '';
   likes: number[] = [];
   isAdmin: boolean = false;
+  loadingComplete = false;
 
   constructor(private articlesService: ArticlesService, private router: Router, public headerDirective: HeaderLoggedUserDirective) {
   this.headerDirective.likesCounterRefresh();
   }
 
+  loadingCompleteFlash(){
+    this.loadingComplete = true;
+    setTimeout(() => this.loadingComplete = false, 3000);
+  }
+
   fetchArticles() {
-    this.articlesService.loadArticles().subscribe(articles => this.articlesList = articles);
+    this.articlesService.loadArticles().subscribe(articles => this.articlesList = articles, error => console.log(error), () => this.loadingCompleteFlash());
   }
 
   likeArticle(id: number): void {
