@@ -13,6 +13,7 @@ export class WeatherComponent implements OnInit {
   obsWeather: Observable<any> = this.articlesService.getWeather();
 
   constructor(private http: HttpClient, private articlesService: ArticlesService) { }
+
   ngOnInit(): void {
   }
 
