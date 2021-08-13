@@ -1,0 +1,5 @@
+<div *ngIf="obsWeather | async as weather">
+  <p>{{weather.location.name}}</p>
+  <p>{{weather.current.temperature}}</p>
+  <img [src]=weather.current.weather_icons>
+</div>

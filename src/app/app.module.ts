@@ -17,6 +17,7 @@ import {AboutUsComponent} from './about-us/about-us.component';
 import {ContactsComponent} from './contacts/contacts.component';
 import {UserRegisterService} from "./users/user-register.service";
 import {CommentsModule} from "./articles/comments/comments.module";
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {CommentsModule} from "./articles/comments/comments.module";
     ArticlesSearchComponent,
     AboutUsComponent,
     ContactsComponent,
+    WeatherComponent,
   ],
   imports: [
     ArticlesModule,

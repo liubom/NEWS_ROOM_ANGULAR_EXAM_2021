@@ -22,6 +22,10 @@ export class ArticlesService {
     return this.http.get<Array<IArticle>>(`http://localhost:5001/articles?title_like=${str}`);
   }
 
+  getWeather(){
+    return this.http.get(`http://api.weatherstack.com/current?access_key=c5a133241628e4a3a957a1b4821b5bcd&query=Sofia`);
+  }
+
 }
 
 
