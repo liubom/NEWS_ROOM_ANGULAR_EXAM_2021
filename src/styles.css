@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.like-button {
+  width: fit-content;
+  border: none;
+  padding: 3px 8px;
+  background-color: #638ab4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: white;
+  border-radius: 26px;
+  margin-left: 10px;
+}
+
+.like-button-liked {
+  width: fit-content;
+  border: none;
+  padding: 3px 8px;
+  background-color: #32b46b;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7rem;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: white;
+  border-radius: 26px;
+  margin-left: 10px;
+}

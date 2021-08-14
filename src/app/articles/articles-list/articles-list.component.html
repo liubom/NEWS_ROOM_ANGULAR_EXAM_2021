@@ -1,37 +1,44 @@
 <p *ngIf="loadingComplete" class="loadingComplete">Lading Complete</p>
-
-<button (click)="goLogin()" *ngIf="!loggedIn else logout">Log In</button>
-<ng-template #logout>
-  <button (click)="logOut()">Log Out</button>
-</ng-template>
+<div class="log-reg">
+  <button class="login-button" (click)="goLogin()" *ngIf="!loggedIn else logout">Log In</button>
+  <ng-template #logout>
+    <button class="logout-button" (click)="logOut()">Log Out</button>
+  </ng-template>
+  <div>
+    <button class="register-button" *ngIf="!loggedIn" (click)="registerUser()">Register</button>
+  </div>
+</div>
 <!--  <div *ngIf="loggedIn else register"><button (click)="addNewArticle()">Add New Article</button></div>-->
 <!--  <ng-template #register>-->
-<div>
-  <button *ngIf="!loggedIn" (click)="registerUser()">Register</button>
-</div>
 <!--  </ng-template>-->
 <section class="articles-content-wrapper">
-  <p>All Articles</p>
+  <h2 class="categoryTitle">Latest News</h2>
   <app-login *ngIf="openSignIn" (toCloseLogin)="toCloseLoginNow($event)"></app-login>
   <section *ngIf="articlesList.length > 0; else l" class="all-articles">
     <article class="article" *ngFor="let article of articlesList">
-      <h3 class="article-title">{{article.title}}</h3>
         <div class="article-img">
-          <img src="{{article.img}}" alt="{{article.title}}">
+          <img class="main-image-big" src="{{article.img}}" alt="{{article.title}}">
         </div>
+      <div class="articleTitle">{{article.title}}</div>
         <div class="article-text-content">
           <p class="article-text">{{article.content.split('.', 3)}}...</p>
-          <div *ngIf="loggedIn; else loggedOut">
-            <p>{{article.date}}</p>
-            <p>{{article.author}}</p>
-            <p><a [routerLink]="['/article', article.id]">[read full article]</a></p>
-          </div>
-          <ng-template #loggedOut>
-            <a>[Sign in to read full article]</a>
-          </ng-template>
-          <div class="article-extras" *ngIf="loggedIn">
-            <app-like-btn [likes]="likes" [articleId]="article.id" (like_article)="likeArticle($event)"></app-like-btn>
-          </div>
+          <section class="article-attributes">
+            <section class="article-attributes-left">
+              <div *ngIf="loggedIn; else loggedOut">
+                <p><a class="in-article-link" [routerLink]="['/article', article.id]">[read full text]</a></p>
+              </div>
+              <div class="article-extras" *ngIf="loggedIn">
+                <app-like-btn [likes]="likes" [articleId]="article.id" (like_article)="likeArticle($event)"></app-like-btn>
+              </div>
+              <ng-template #loggedOut>
+                <a class="in-article-link">[sign in to read full text]</a>
+              </ng-template>
+            </section>
+            <section class="article-attributes-right">
+              <p class="article-date">{{article.date}}</p>
+              <p class="article-author">Author: {{article.author}}</p>
+            </section>
+          </section>
         </div>
     </article>
   </section>

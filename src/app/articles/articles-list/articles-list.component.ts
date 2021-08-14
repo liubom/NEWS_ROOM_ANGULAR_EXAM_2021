@@ -26,7 +26,7 @@ export class ArticlesListComponent implements OnInit {
 
   loadingCompleteFlash(){
     this.loadingComplete = true;
-    setTimeout(() => this.loadingComplete = false, 3000);
+    setTimeout(() => this.loadingComplete = false, 1800);
   }
 
   fetchArticles() {

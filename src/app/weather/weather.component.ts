@@ -15,6 +15,8 @@ export class WeatherComponent implements OnInit {
   constructor(private http: HttpClient, private articlesService: ArticlesService) { }
 
   ngOnInit(): void {
+
+    console.log('WEATHER');
   }
 
 }

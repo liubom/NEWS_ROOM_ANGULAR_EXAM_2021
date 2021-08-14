@@ -44,8 +44,9 @@ import { WeatherComponent } from './weather/weather.component';
     AuthGuard,
     UserRegisterService
   ],
-  exports: [
-  ],
+    exports: [
+        WeatherComponent
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

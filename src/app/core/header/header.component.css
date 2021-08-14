@@ -1,9 +1,45 @@
-a {
-  margin-right: 10px;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 
 .active {
-  background-color: lightblue;
+  background-color: #719091;
+  color: white;
   padding: 7px;
 }
+
+nav {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: black;
+  margin-right: 25px;
+  z-index: 8;
+}
+
+.mainHeader {
+  width: 100%;
+  position: fixed;
+  padding: 10px;
+  /*margin-bottom: 30px;*/
+  background-color: #fff;
+  opacity: 70%;
+  z-index: 1;
+  border-bottom: coral solid 3px;
+}
+
+.siteLogo {
+  font-family: 'Viaoda Libre', cursive;
+  font-size: 40px;
+  color: black;
+  z-index: 7;
+}
+
+
