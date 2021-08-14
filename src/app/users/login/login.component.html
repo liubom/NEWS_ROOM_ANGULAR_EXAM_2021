@@ -2,22 +2,24 @@
   <div class="add_comment_modal_content">
     <h3>Sign In</h3>
     <form (ngSubmit)="login(form)" #form="ngForm">
-      <label for="user">Username</label>
-      <input name="user" id="user" placeholder="Username" #usernameInput="ngModel" ngModel required [minlength]="6">
-      <ul *ngIf="usernameInput.invalid && usernameInput.touched">
-        <li *ngIf="usernameInput.errors?.required">username is required</li>
-        <li *ngIf="usernameInput.errors?.minlength">username is invalid</li>
-      </ul>
-      <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Password" #passwordInput="ngModel" ngModel required [minlength]="6">
-        <ul *ngIf="passwordInput.invalid && passwordInput.touched">
-          <li *ngIf="passwordInput.errors?.required">password is required</li>
-          <li *ngIf="passwordInput.errors?.minlength">Password should be min 6 characters!</li>
+      <div class="username-group">
+        <label for="user">Username</label>
+        <input class="log-username" name="user" id="user" placeholder="Username" #usernameInput="ngModel" ngModel required [minlength]="6">
+        <ul class="log-errors" *ngIf="usernameInput.invalid && usernameInput.touched">
+          <li class="log-error-user" *ngIf="usernameInput.errors?.required">username is required</li>
+          <li class="log-error-user" *ngIf="usernameInput.errors?.minlength">username is invalid</li>
         </ul>
       </div>
-      <button [disabled]="form.invalid" type="submit">Sign In</button>
+      <div class="password-group">
+        <label for="password">Password</label>
+        <input class="log-password" type="password" name="password" id="password" placeholder="Password" #passwordInput="ngModel" ngModel required [minlength]="6">
+        <ul class="log-errors" *ngIf="passwordInput.invalid && passwordInput.touched">
+          <li class="log-error-pass" *ngIf="passwordInput.errors?.required">password is required</li>
+          <li class="log-error-pass" *ngIf="passwordInput.errors?.minlength">Password should be min 6 characters!</li>
+        </ul>
+      </div>
+      <button class="login-submit" [disabled]="form.invalid" type="submit">Sign In</button>
     </form>
-    <button (click)="cancelLogin()">Close</button>
+    <button class="close-login" (click)="cancelLogin()"><i class="far fa-times-circle"></i></button>
   </div>
 </div>

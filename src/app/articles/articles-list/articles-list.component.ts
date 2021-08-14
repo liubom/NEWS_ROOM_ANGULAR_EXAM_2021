@@ -56,6 +56,7 @@ export class ArticlesListComponent implements OnInit {
     localStorage.setItem('currentUser', '');
     this.loggedIn = false;
     this.headerDirective.isLoggedIn = false;
+    this.headerDirective.currentUser = '';
   }
 
   goLogin(): void {

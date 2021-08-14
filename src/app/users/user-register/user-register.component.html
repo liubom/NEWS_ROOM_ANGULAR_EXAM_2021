@@ -1,44 +1,54 @@
-<h3>Register</h3>
-<h4 *ngIf="userExists">This username is used!</h4>
-<form (ngSubmit)="register(userForm)" #userForm="ngForm">
-  <div>
-    <label>Username</label>
-    <ul *ngIf="userForm.invalid && userForm.touched">
-      <li *ngIf="username.errors?.required">
-        User name is Required!
-      </li>
-      <li *ngIf="username.errors?.minlength">
-        Min characters 6!
-      </li>
-    </ul>
-    <input name="username" id="username" placeholder="Username" #username='ngModel' ngModel required [minlength]="6">
-  </div>
-  <div>
-    <ul *ngIf="userForm.invalid && userForm.touched">
-      <li *ngIf="password.errors?.required">
-        Password is Required!
-      </li>
-      <li *ngIf="password.errors?.minlength">
-        Min characters 6!
-      </li>
-    </ul>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" placeholder="Password" #password='ngModel' ngModel required
-           [minlength]="6">
-  </div>
-<!--  <div>-->
-<!--        <ul *ngIf="userForm.invalid && userForm.touched">-->
-<!--          <li *ngIf="repassword.errors?.required">-->
-<!--            Confirm your password is Required!-->
-<!--          </li>-->
-<!--          <li *ngIf="repassword.errors?.minlength">-->
-<!--            Min characters 6!-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--        <label for="repassword">Confirm password</label>-->
-<!--        <input type="password" name="repassword" id="repassword" placeholder="Password" #repassword='ngModel' ngModel required>-->
-<!--  </div>-->
-  <button type="submit">Register</button>
-</form>
+<section class="register-content">
+  <h3>Register</h3>
+  <h4 *ngIf="userExists">This username is used!</h4>
+  <form (ngSubmit)="register(userForm)" #userForm="ngForm">
+    <div class="username-group">
+      <label for="username">Username</label>
+      <input class="log-username" name="username" id="username" placeholder="Username" #username='ngModel' ngModel required [minlength]="6">
+    </div>
+    <div class="password-group">
+      <label for="password">Password</label>
+      <input class="log-password" type="password" name="password" id="password" placeholder="Password" #password='ngModel' ngModel required
+             [minlength]="6">
+    </div>
+    <!--  <div>-->
+    <!--        <ul *ngIf="userForm.invalid && userForm.touched">-->
+    <!--          <li *ngIf="repassword.errors?.required">-->
+    <!--            Confirm your password is Required!-->
+    <!--          </li>-->
+    <!--          <li *ngIf="repassword.errors?.minlength">-->
+    <!--            Min characters 6!-->
+    <!--          </li>-->
+    <!--        </ul>-->
+    <!--        <label for="repassword">Confirm password</label>-->
+    <!--        <input type="password" name="repassword" id="repassword" placeholder="Password" #repassword='ngModel' ngModel required>-->
+    <!--  </div>-->
+    <button class="login-submit" type="submit">Register</button>
+  </form>
+  <section class="form-messages" *ngIf="userForm.invalid && userForm.touched">
+    <section class="form-user-messages">
+      <ul class="log-errors">
+        <li class="log-error-user" *ngIf="username.errors?.required">
+          User name is Required!
+        </li>
+        <li class="log-error-user" *ngIf="username.errors?.minlength">
+          Min characters 6!
+        </li>
+      </ul>
+    </section>
+    <section class="form-password-messages">
+      <ul class="log-errors">
+        <li class="log-error-pass" *ngIf="password.errors?.required">
+          Password is Required!
+        </li>
+        <li class="log-error-pass" *ngIf="password.errors?.minlength">
+          Min characters 6!
+        </li>
+      </ul>
+    </section>
+  </section>
+</section>
+
+
 
 <p>MESSAGE TO INDICATE THAT USER NAME IS IN USE ALREADY!!!</p>

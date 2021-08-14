@@ -3,15 +3,16 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 750px;
 }
 
 .like-button {
   width: fit-content;
   border: none;
-  padding: 3px 8px;
+  padding: 4px 8px;
   background-color: #638ab4;
   font-family: 'Montserrat', sans-serif;
-  font-size: .7rem;
+  font-size: .65rem;
   letter-spacing: 1px;
   text-transform: capitalize;
   color: white;
@@ -22,10 +23,10 @@ body {
 .like-button-liked {
   width: fit-content;
   border: none;
-  padding: 3px 8px;
+  padding: 4px 8px;
   background-color: #32b46b;
   font-family: 'Montserrat', sans-serif;
-  font-size: .7rem;
+  font-size: .65rem;
   letter-spacing: 1px;
   text-transform: capitalize;
   color: white;

@@ -35,7 +35,7 @@ export class UserRegisterComponent implements OnInit {
       .subscribe(data => {
         if (data.length > 0) {
           this.userExists = true;
-          setTimeout(() => this.userExists = false, 2500);
+          setTimeout(() => this.userExists = false, 2200);
           return;
         } else {
           this.userRegisterService.addUser(username, password, this.isAdmin).subscribe(data => this.newUser = data);

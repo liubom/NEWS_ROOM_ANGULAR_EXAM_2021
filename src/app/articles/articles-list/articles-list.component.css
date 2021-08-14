@@ -4,51 +4,53 @@
   margin-top: 30px;
 }
 
-.articles-content-wrapper {
+.articles-content {
   margin: 30px auto;
   width: 80%;
 }
 
 .all-articles {
-  width: 80vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
+  padding-top: 68px;
 }
 
 .article {
   display: flex;
-  width: 45%;
+  width: 40%;
   flex-direction: column;
   margin: 15px 15px;
   align-items: center;
-  padding: 15px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
   border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 .articleTitle {
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
   color: #3d3d3d;
   margin: 15px auto;
+  padding: 0 10px;
 }
 
 .article-text-content {
-  width: 95%;
+  width: 90%;
   font-family: 'Montserrat', sans-serif;
-  font-size: .95rem;
+  font-size: .85rem;
   float: left;
   display: block;
   text-align: justify;
-  padding: 0 0 15px 10px;
+  padding: 0 0 18px 16px;
   border-left: #55AF21 solid 3px;
 }
 
 .article-img {
-  width: 97%;
+  width: 100%;
 }
 
 img.main-image-big {
@@ -88,41 +90,51 @@ font-size: .9rem;
   margin: 0;
 }
 
-.categoryTitle {
-  width: 40%;
+.main-articles-title {
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  width: 400px;
   position: sticky;
-  top: 59px;
-  z-index: 6;
+  top: 80px;
+  z-index: 11;
+  align-items: center;
+  justify-content: space-around;
   background-color: white;
-  opacity: 80%;
+  opacity: 70%;
+}
+
+.categoryTitle {
+  display: inline-block;
+  width: 200px;
+  margin: 0 auto;
 }
 
 a.in-article-link {
   text-decoration: none;
   color: white;
   letter-spacing: 1px;
-  font-size: 0.68rem;
+  font-size: 9px;
   background-color: #444444;
-  padding: 3px 10px 4px 10px;
+  padding: 4px 10px 5px 10px;
   text-transform: uppercase;
 }
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   color: #444444;
 }
 
 .loadingComplete {
+  width: fit-content;
+  display: inline-block;
   position: absolute;
-  top: 63px;
-  left: 57%;
+  top: -12px;
+  left: 119%;
   padding: 4px 16px 4px 16px;
   background-color: #16a256;
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
   border-radius: 26px;
@@ -139,12 +151,12 @@ h2 {
 .login-button {
   width: 120px;
   border: none;
-  padding: 8px 12px;
+  padding: 6px 10px;
   margin-bottom: 10px;
   background-color: #16a256;
   border-radius: 26px;
   color: white;
-  font-size: .9rem;
+  font-size: 11px;
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
@@ -153,12 +165,12 @@ h2 {
 .logout-button {
   width: 120px;
   border: none;
-  padding: 8px 12px;
+  padding: 6px 10px;
   margin-bottom: 10px;
   background-color: #FF8C00;
   border-radius: 26px;
   color: white;
-  font-size: .9rem;
+  font-size: 11px;
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
@@ -167,12 +179,12 @@ h2 {
 .register-button {
   width: 120px;
   border: none;
-  padding: 8px 12px;
+  padding: 6px 10px;
   margin-bottom: 10px;
   background-color: #3689ff;
   border-radius: 26px;
   color: white;
-  font-size: .9rem;
+  font-size: 11px;
   text-transform: uppercase;
   outline: none;
   cursor: pointer;

@@ -1,11 +1,11 @@
 <div class='mainHeader'>
   <nav>
     <a routerLink="/articles" routerLinkActive="active">Articles</a>
-    <a *ngIf="headerDirective.isLoggedIn" routerLink="/favorites" routerLinkActive="active">Favorite articles<span
-      *ngIf="headerDirective.likesCount > 0"> {{headerDirective.likesCount}}</span></a>
+    <a *ngIf="headerDirective.isLoggedIn" routerLink="/favorites" routerLinkActive="active">Favorite articles
+      <span class="infoDot" *ngIf="headerDirective.likesCount > 0"> {{headerDirective.likesCount}}</span></a>
     <a *ngIf="headerDirective.isLoggedIn" routerLink="/search" routerLinkActive="active">Search</a>
     <a routerLink="/about-us" routerLinkActive="active">About Us</a>
     <a routerLink="contacts" routerLinkActive="active">Contacts</a>
-    <span>WELCOME USER</span>
+    <a *ngIf="headerDirective.isLoggedIn">WELCOME <span class="header-username">{{headerDirective.currentUser}}</span></a>
   </nav>
 </div>
