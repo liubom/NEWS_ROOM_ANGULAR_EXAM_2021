@@ -35,13 +35,16 @@ a {
   opacity: 70%;
   z-index: 1;
   border-bottom: coral solid 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .siteLogo {
   font-family: 'Viaoda Libre', cursive;
-  font-size: 40px;
+  font-size: 50px;
   color: black;
   z-index: 7;
+  position: fixed;
+  top: 1px;
 }
 
 .header-username {

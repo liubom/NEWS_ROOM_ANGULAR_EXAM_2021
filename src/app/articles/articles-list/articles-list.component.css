@@ -24,9 +24,9 @@
   flex-direction: column;
   margin: 15px 15px;
   align-items: center;
-  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
-  border-radius: 10px;
-  padding-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;  padding-bottom: 20px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .articleTitle {
@@ -145,7 +145,7 @@ h2 {
 .log-reg {
   position: fixed;
   top: 40px;
-  left: 30px;
+  left: 70px;
 }
 
 .login-button {
