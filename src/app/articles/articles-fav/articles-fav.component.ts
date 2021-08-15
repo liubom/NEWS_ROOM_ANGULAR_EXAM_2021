@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ArticlesService} from "../articles-list/articles.service";
 import {IArticle} from "../../interfaces/article";
-import {filter, map} from "rxjs/operators";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-articles-fav',
@@ -15,7 +15,8 @@ export class ArticlesFavComponent implements OnInit {
   currUser: string | null = localStorage.getItem('currentUser');
   likes: number[] | undefined = JSON.parse(<string>localStorage.getItem(`${this.currUser}_likes`));
 
-  constructor(private articlesService: ArticlesService) { }
+  constructor(private articlesService: ArticlesService) {
+  }
 
   fetchArticles() {
     this.articlesService.loadArticles()

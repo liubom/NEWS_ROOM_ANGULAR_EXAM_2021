@@ -19,8 +19,6 @@ export class ArticleDetailsComponent implements OnInit {
   addCommentVisible: boolean = false;
   viewCommentsVisible: boolean = false;
 
-  // articleId!: number;
-
   constructor(private route: ActivatedRoute, private articlesService: ArticlesService, public headerDirective: HeaderLoggedUserDirective) {
 
     // V1 this.articleId = Number(this.route.snapshot.paramMap.get('id'));
@@ -37,12 +35,10 @@ export class ArticleDetailsComponent implements OnInit {
   }
 
   addComment(id: number, title: string) {
-    console.log(`Comment to article: ${title}`);
     this.addCommentVisible = !this.addCommentVisible;
   }
 
   viewComments(id: number, title: string) {
-    console.log(`Viewing comments to article ${title}`);
     this.viewCommentsVisible = !this.viewCommentsVisible;
   }
 
@@ -53,7 +49,6 @@ export class ArticleDetailsComponent implements OnInit {
     }
 
     this.headerDirective.likesCounterRefresh();
-    console.log(this.likes);
   }
 
   ngOnInit(): void {

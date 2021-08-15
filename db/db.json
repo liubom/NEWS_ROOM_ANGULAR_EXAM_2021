@@ -167,6 +167,48 @@
     }
   ],
   "comments": [
+    {
+      "postId": 98,
+      "username": "@liubo",
+      "comment": "komentar\n",
+      "articleId": "98",
+      "id": 1
+    },
+    {
+      "postId": 98,
+      "username": "@kristina",
+      "comment": "ok",
+      "articleId": "98",
+      "id": 2
+    },
+    {
+      "postId": 98,
+      "username": "@liubo",
+      "comment": "ококок\n",
+      "articleId": "98",
+      "id": 3
+    },
+    {
+      "postId": 98,
+      "username": "@liubo",
+      "comment": "кйхкхй",
+      "articleId": "98",
+      "id": 4
+    },
+    {
+      "postId": 103,
+      "username": "@liubo",
+      "comment": "okokok",
+      "articleId": "103",
+      "id": 5
+    },
+    {
+      "postId": 98,
+      "username": "@kristina",
+      "comment": "okokk",
+      "articleId": "98",
+      "id": 6
+    }
   ],
   "users": [
     {
@@ -180,6 +222,12 @@
       "password": "123456",
       "isAdmin": false,
       "id": 2
+    },
+    {
+      "username": "@stamat",
+      "password": "123456",
+      "isAdmin": false,
+      "id": 3
     }
   ]
 }

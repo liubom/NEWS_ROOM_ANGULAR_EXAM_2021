@@ -40,7 +40,6 @@ export class LoginComponent {
           if (data.length < 1) {
             this.wrong = true;
             setTimeout(() => this.wrong = false, 3000);
-            console.log('Wrong Username or Password');
             return;
           } else {
             localStorage.setItem('currentUser', `${user}`);

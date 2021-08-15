@@ -19,7 +19,6 @@ export class ArticlesSearchComponent implements OnInit {
 
     if (!form.invalid) {
       let searchString: string = form.value.search;
-      console.log('Searching for...' + searchString);
       this.result = this.articlesService.searchInArticles(searchString);
     }
   }

@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CommentsService} from "../comments.service";
 import {Router} from "@angular/router";
-import {IArticleComment} from "../../../interfaces/article-comment";
 import {NgForm} from "@angular/forms";
 import {CommentsDirective} from "../comments.directive";
 
@@ -26,31 +25,18 @@ export class AddCommentComponent implements OnInit {
     setTimeout(() => this.newComment = false, 2000);
   }
 
-
   addNewComment(form: NgForm): void {
 
     let postId = this.articleId;
     let username = this.currentUser;
     let comment = form.value.comment;
 
-    //to be deleted...
-    console.log('Before ADD');
-    console.log(this.commentDirective.comments);
-    // to be deleted...
-
     if (!form.invalid) {
-      this.commentService.addComment(postId, username, comment).subscribe(data =>this.commentDirective.comments.push(data));
-      console.log('After ADD');
-      console.log(this.commentDirective.comments);
+      this.commentService.addComment(postId, username, comment).subscribe(data => this.commentDirective.comments.push(data));
       form.reset('');
 
       this.newCommentFlashMessage();
     }
-
-
-    // this.commentService.getComments(this.articleId)
-    //   .subscribe((data) => this.comments = data);
-
   }
 
   ngOnInit(): void {
