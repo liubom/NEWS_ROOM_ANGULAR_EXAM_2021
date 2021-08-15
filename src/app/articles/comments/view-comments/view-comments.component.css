@@ -1,0 +1,17 @@
+h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h5 {
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-size: 11px;
+}
+
+.comments-list {
+  padding: 15px;
+  width: 400px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow: scroll;
+}

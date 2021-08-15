@@ -1,9 +1,17 @@
-<h3>Search for Article</h3>
-<form (ngSubmit)="searchForArticle(form)" #form="ngForm">
-  <input type="text" placeholder="Search" name="search" id="search" #search="ngModel" ngModel required [minlength]="3">
-  <button>search</button>
-</form>
+<section class="search-wrapper">
+  <h3>Search for Article</h3>
+  <form (ngSubmit)="searchForArticle(form)" #form="ngForm">
+    <input type="text" placeholder="Search" name="search" id="search" #search="ngModel" ngModel required [minlength]="3">
+    <button>search</button>
+  </form>
+  <div class="search-results" *ngIf="result | async as result">
+    <article class="fav-article" *ngFor="let res of result">
+      <section class="img-container">
+        <img src="{{res.img}}" alt="{{res.title}}">
+      </section>
+      <h2 class="article-title">{{res.title}}</h2>
+      <a class="in-article-link" [routerLink]="['/article', res.id]">[read full article]</a>
+    </article>
+  </div>
+</section>
 
-<ul *ngIf="result | async as result">
-  <li *ngFor="let res of result">{{res.title}} <a [routerLink]="['/article', res.id]"> [read this article]</a></li>
-</ul>

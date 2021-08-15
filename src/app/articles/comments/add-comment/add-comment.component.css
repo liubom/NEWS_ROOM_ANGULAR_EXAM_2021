@@ -1,0 +1,36 @@
+.add-comment-wrapper {
+  width: 400px;
+}
+
+h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  height: 250px;
+  margin-bottom: 25px;
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+button.send-comment {
+  width: fit-content;
+  text-transform: uppercase;
+  background-color: #16a256;
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  border-radius: 26px;
+  color: white;
+  margin: 0 auto;
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 <section class="register-content">
   <h3>Register</h3>
-  <h4 *ngIf="userExists">This username is used!</h4>
+  <h4 class="user-exists-message" *ngIf="userExists">This username is used!</h4>
   <form (ngSubmit)="register(userForm)" #userForm="ngForm">
     <div class="username-group">
       <label for="username">Username</label>
@@ -49,6 +49,3 @@
   </section>
 </section>
 
-
-
-<p>MESSAGE TO INDICATE THAT USER NAME IS IN USE ALREADY!!!</p>
