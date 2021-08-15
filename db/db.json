@@ -167,41 +167,6 @@
     }
   ],
   "comments": [
-    {
-      "postId": 98,
-      "username": "@liubo",
-      "comment": "wertyu",
-      "articleId": "98",
-      "id": 1
-    },
-    {
-      "postId": 98,
-      "username": "@kristina",
-      "comment": "xcvbnm",
-      "articleId": "98",
-      "id": 2
-    },
-    {
-      "postId": 99,
-      "username": "@kristina",
-      "comment": "OK",
-      "articleId": "99",
-      "id": 3
-    },
-    {
-      "postId": 99,
-      "username": "@kristina",
-      "comment": "OK",
-      "articleId": "99",
-      "id": 4
-    },
-    {
-      "postId": 99,
-      "username": "@kristina",
-      "comment": "mmm",
-      "articleId": "99",
-      "id": 5
-    }
   ],
   "users": [
     {
@@ -215,18 +180,6 @@
       "password": "123456",
       "isAdmin": false,
       "id": 2
-    },
-    {
-      "username": "@hristo",
-      "password": "123456",
-      "isAdmin": false,
-      "id": 3
-    },
-    {
-      "username": "@stamat",
-      "password": "123456",
-      "isAdmin": false,
-      "id": 4
     }
   ]
 }

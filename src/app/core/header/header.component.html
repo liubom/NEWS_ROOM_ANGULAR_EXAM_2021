@@ -6,7 +6,7 @@
       <span class="infoDot" *ngIf="headerDirective.likesCount > 0"> {{headerDirective.likesCount}}</span></a>
     <a *ngIf="headerDirective.isLoggedIn" routerLink="/search" routerLinkActive="active">Search</a>
     <a routerLink="/about-us" routerLinkActive="active">About Us</a>
-    <a routerLink="contacts" routerLinkActive="active">Contacts</a>
-    <a *ngIf="headerDirective.isLoggedIn">WELCOME <span class="header-username">{{headerDirective.currentUser}}</span></a>
+    <a routerLink="/contacts" routerLinkActive="active">Contacts</a>
+    <a *ngIf="headerDirective.isLoggedIn">WELCOME <span class="header-username">{{headerDirective.currentUser}}</span><a class="not-reading" routerLink="/article" routerLinkActive="reading">READING...</a></a>
   </nav>
 </div>

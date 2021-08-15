@@ -8,6 +8,42 @@
   padding: 7px;
 }
 
+.reading {
+  background-color: #707070;
+  padding: 5px;
+  text-blink: 6;
+  animation: reading infinite;
+  animation-duration: 2s;
+  cursor: default;
+  pointer-events: none;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.not-reading {
+  color: white;
+}
+
+@keyframes reading {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 25%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 100%;
+  }
+
+}
+
+
 nav {
   margin: 0 auto;
   width: 60%;
