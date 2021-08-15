@@ -8,14 +8,15 @@
 }
 
 .fav-article {
-  height: 157px;
+  height: 159px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   margin-bottom: 15px;
   border-top-left-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
 
 .article-title {
   padding-left: 25px;
