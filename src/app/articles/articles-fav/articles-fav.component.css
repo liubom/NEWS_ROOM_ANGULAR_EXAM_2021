@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@500&display=swap');
 
 .content {
-  padding-top: 60px;
   width: 60%;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
+  padding: 80px 0;
 }
 
 .fav-article {

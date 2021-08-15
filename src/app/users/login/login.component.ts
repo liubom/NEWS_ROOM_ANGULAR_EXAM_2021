@@ -18,6 +18,7 @@ export class LoginComponent {
   @Output() toCloseLogin = new EventEmitter();
   open: boolean = true;
   loggedIn: boolean = !!JSON.parse(String(localStorage.getItem('loggedIn')));
+  wrong: boolean = false;
 
   constructor(private usersService: UserRegisterService, public headerDirective: HeaderLoggedUserDirective) {
   }
@@ -37,18 +38,17 @@ export class LoginComponent {
         })))
         .subscribe(data => {
           if (data.length < 1) {
+            this.wrong = true;
+            setTimeout(() => this.wrong = false, 3000);
             console.log('Wrong Username or Password');
             return;
           } else {
             localStorage.setItem('currentUser', `${user}`);
             this.headerDirective.isLoggedIn = true;
 
-            // localStorage.getItem('loggedIn') === 'true' ?
-            // localStorage.setItem('loggedIn', 'false') :
             localStorage.setItem('loggedIn', 'true');
             this.headerDirective.likesCounterRefresh();
             this.headerDirective.isLoggedIn = !!JSON.parse(String(localStorage.getItem('loggedIn')));
-            // this.loggedIn = !this.loggedIn;
 
             this.open = !this.open;
             this.toCloseLogin.emit({open: false, user: user});

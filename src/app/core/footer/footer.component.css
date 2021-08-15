@@ -1,0 +1,16 @@
+.footer-wrapper {
+  border-top: 2px solid coral;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  opacity: 80%;
+  vertical-align: middle;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}

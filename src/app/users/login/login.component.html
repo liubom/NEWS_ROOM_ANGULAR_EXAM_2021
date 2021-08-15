@@ -5,21 +5,49 @@
       <div class="username-group">
         <label for="user">Username</label>
         <input class="log-username" name="user" id="user" placeholder="Username" #usernameInput="ngModel" ngModel required [minlength]="6">
-        <ul class="log-errors" *ngIf="usernameInput.invalid && usernameInput.touched">
-          <li class="log-error-user" *ngIf="usernameInput.errors?.required">username is required</li>
-          <li class="log-error-user" *ngIf="usernameInput.errors?.minlength">username is invalid</li>
-        </ul>
+<!--        <ul class="log-errors" *ngIf="usernameInput.invalid && usernameInput.touched">-->
+<!--          <li class="log-error-user" *ngIf="usernameInput.errors?.required">username is required</li>-->
+<!--          <li class="log-error-user" *ngIf="usernameInput.errors?.minlength">username is invalid</li>-->
+<!--        </ul>-->
       </div>
       <div class="password-group">
         <label for="password">Password</label>
         <input class="log-password" type="password" name="password" id="password" placeholder="Password" #passwordInput="ngModel" ngModel required [minlength]="6">
-        <ul class="log-errors" *ngIf="passwordInput.invalid && passwordInput.touched">
-          <li class="log-error-pass" *ngIf="passwordInput.errors?.required">password is required</li>
-          <li class="log-error-pass" *ngIf="passwordInput.errors?.minlength">Password should be min 6 characters!</li>
-        </ul>
+<!--        <ul class="log-errors" *ngIf="passwordInput.invalid && passwordInput.touched">-->
+<!--          <li class="log-error-pass" *ngIf="passwordInput.errors?.required">password is required</li>-->
+<!--          <li class="log-error-pass" *ngIf="passwordInput.errors?.minlength">Password should be min 6 characters!</li>-->
+<!--        </ul>-->
       </div>
       <button class="login-submit" [disabled]="form.invalid" type="submit">Sign In</button>
     </form>
     <button class="close-login" (click)="cancelLogin()"><i class="far fa-times-circle"></i></button>
+
+<!--    test-->
+    <section class="form-messages" *ngIf="form.invalid && form.touched">
+      <section class="form-user-messages">
+        <ul class="log-errors">
+          <li class="log-error-user" *ngIf="usernameInput.errors?.required">
+            User name is Required!
+          </li>
+          <li class="log-error-user" *ngIf="usernameInput.errors?.minlength">
+            Min characters 6!
+          </li>
+        </ul>
+      </section>
+      <section class="form-password-messages">
+        <ul class="log-errors">
+          <li class="log-error-pass" *ngIf="passwordInput.errors?.required">
+            Password is Required!
+          </li>
+          <li class="log-error-pass" *ngIf="passwordInput.errors?.minlength">
+            Min characters 6!
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section *ngIf="wrong" class="wrong-input">
+      <p class="wrong-message-text">wrong username or password</p>
+    </section>
+<!--    test-->
   </div>
 </div>

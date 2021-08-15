@@ -15,6 +15,7 @@
 }
 
 .add_comment_modal_content {
+  position: relative;
   width: 290px;
   display: flex;
   flex-direction: column;
@@ -24,7 +25,6 @@
   background: white;
   padding: 15px;
   border-radius: 5px;
-  position: relative;
   font-family: 'Montserrat', sans-serif;
   opacity: 85%;
 }
@@ -88,11 +88,55 @@ form {
   left: -43px;
 }
 
-ul.log-errors {
-  position: absolute;
-}
+/*ul.log-errors {*/
+/*  position: absolute;*/
+/*}*/
 
 li {
+  /*position: absolute;*/
+}
+
+.form-messages {
+  width: 362px;
+  height: 30px;
   position: absolute;
+  display: flex;
+  background-color: #d2eff5;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 26px;
+  top: 113%;
+  z-index: 12;
+}
+
+.form-user-messages, .form-password-messages {
+  position: absolute;
+  width: 45%;
+  top: -3px;
+}
+
+.form-user-messages {
+  left: 40px;
+}
+
+.form-password-messages {
+  left: 50%;
+}
+
+ul.log-errors {
+  font-family: 'Montserrat', sans-serif;
+  list-style: none;
+  padding: 0;
+}
+
+.wrong-input {
+  position: absolute;
+  top: 85%;
+}
+
+.wrong-message-text {
+  font-size: .9rem;
+  color: red;
+  text-transform: capitalize;
 }
 
