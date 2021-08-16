@@ -1,5 +1,5 @@
 <section class="content">
-  <div *ngIf="articlesList.length > 0 else empty">
+  <div class="articles-content" *ngIf="articlesList.length > 0 else empty">
     <h3>Your favorite articles are here, read them again.</h3>
     <div class="fav-article" *ngFor="let article of articlesList">
       <section class="img-container">
