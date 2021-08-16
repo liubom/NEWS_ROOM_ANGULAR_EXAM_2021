@@ -1,13 +1,15 @@
 <section class="content">
   <div class="articles-content" *ngIf="articlesList.length > 0 else empty">
     <h3>Your favorite articles are here, read them again.</h3>
-    <div class="fav-article" *ngFor="let article of articlesList">
-      <section class="img-container">
-        <img src="{{article.img}}" alt="{{article.title}}">
-      </section>
-      <h2 class="article-title">{{article.title}}</h2>
-      <a class="in-article-link" [routerLink]="['/article', article.id]">[read full article]</a>
-    </div>
+    <section class="articles-list">
+      <article class="fav-article" *ngFor="let article of articlesList">
+        <section class="img-container">
+          <img src="{{article.img}}" alt="{{article.title}}">
+        </section>
+        <h2 class="article-title">{{article.title}}</h2>
+        <a class="in-article-link" [routerLink]="['/article', article.id]">read full article</a>
+      </article>
+    </section>
   </div>
   <ng-template #empty>
     <h3>It's empty now, but you can always add your favorite articles here.</h3>
