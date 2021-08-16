@@ -14,15 +14,15 @@
 
 .article-image-container {
   width: 80%;
-}
-
-.article-image-container {
-  width: 100%;
   margin: 0 auto;
 }
 
 .article-title {
   text-align: center;
+  position: sticky;
+  top: 71px;
+  background: white;
+  opacity: 90%;
 }
 
 .article-image {
@@ -37,6 +37,7 @@
   text-align: justify-all;
   margin: 25px auto;
   line-height: 1.5rem;
+  font-size: .9rem;
 }
 
 .article-info {

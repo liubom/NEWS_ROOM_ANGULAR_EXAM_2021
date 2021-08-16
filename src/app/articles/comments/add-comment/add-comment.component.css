@@ -1,14 +1,17 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css');
+
 .add-comment-wrapper {
   width: 400px;
 }
 
-h4, h5 {
+h4, h5, p {
   font-family: 'Montserrat', sans-serif;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 textarea {
@@ -36,5 +39,22 @@ button.send-comment {
 }
 
 .new-comment-added {
-  
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  left: 125%;
+  width: 160px;
 }
+
+.fa-arrow-circle-right {
+  color: #16a256;
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+
+p {
+  font-size: .65rem;
+  margin: 0;
+}
+

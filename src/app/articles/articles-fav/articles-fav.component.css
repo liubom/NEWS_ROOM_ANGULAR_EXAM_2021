@@ -8,17 +8,18 @@
 }
 
 .fav-article {
-  height: 159px;
+  height: 66px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   margin-bottom: 15px;
   border-top-left-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 
 .article-title {
+  font-size: 12px;
   padding-left: 25px;
   flex-basis: 58%;
 }
@@ -38,6 +39,10 @@ h2, h3 {
 text-align: center;
 }
 
+h3 {
+  margin-bottom: 50px;
+}
+
 p {
   font-size: 12px;
 }
@@ -50,6 +55,6 @@ p {
 img {
   border-top-left-radius: 16px;
   width: 100%;
-  height: 160px;
+  height: 66px;
   object-fit: cover;
 }

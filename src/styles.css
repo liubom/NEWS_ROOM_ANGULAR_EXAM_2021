@@ -12,12 +12,12 @@ body {
   padding: 4px 8px;
   background-color: #638ab4;
   font-family: 'Montserrat', sans-serif;
-  font-size: .65rem;
+  font-size: .5rem;
   letter-spacing: 1px;
   text-transform: capitalize;
   color: white;
   border-radius: 26px;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
 }
 
 .like-button-liked {
@@ -26,10 +26,10 @@ body {
   padding: 4px 8px;
   background-color: #32b46b;
   font-family: 'Montserrat', sans-serif;
-  font-size: .65rem;
+  font-size: .5rem;
   letter-spacing: 1px;
   text-transform: capitalize;
   color: white;
   border-radius: 26px;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
 }

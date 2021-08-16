@@ -71,12 +71,11 @@ a {
   opacity: 70%;
   z-index: 1;
   border-bottom: coral solid 3px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
 
 .siteLogo {
   font-family: 'Viaoda Libre', cursive;
-  font-size: 50px;
+  font-size: 42px;
   color: black;
   z-index: 7;
   position: fixed;
